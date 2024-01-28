@@ -1,13 +1,5 @@
 [
 {
-		"title": "1장 GPT-4, ChatGPT, 랭체인 개요",
-		"date":"Sun Jan 28 2024 13:09:09 GMT+0000 (Coordinated Universal Time)",
-		"url":"/Blogging/study/books/GPT-4+ChatGPT+라마인덱스+랭체인을 활용한 인공지능 프로그래밍/1장 GPT-4, ChatGPT, 랭체인 개요/",
-		"content": "ChatGPT란?\nGPT-4와 GPT-3.5란?\n대규모 언어 모델이란?\nOpenAI API란?\n라마인덱스란?\n랭체인이란?\n대규모 언어 모델의 활용 사례",
-		"tags": [ "note"]
-},
-
-{
 		"title": "asynchronous (비동기)",
 		"date":"Sun Jan 28 2024 13:09:09 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/cs/asynchronous (비동기)/",
