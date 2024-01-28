@@ -24,22 +24,6 @@
 },
 
 {
-		"title": "synchronous",
-		"date":"Sun Jan 28 2024 13:00:17 GMT+0000 (Coordinated Universal Time)",
-		"url":"/Blogging/study/cs/synchronous/",
-		"content": "요청과 그 결과가 한번에 처리되는 것\n요청을 보낸 후 결과가 돌아올 때까지 대기하는 것",
-		"tags": [ "note"]
-},
-
-{
-		"title": "thread & process",
-		"date":"Sun Jan 28 2024 13:00:17 GMT+0000 (Coordinated Universal Time)",
-		"url":"/Blogging/study/cs/thread &amp; process/",
-		"content": "스레드와 프로세스는 컴퓨터 프로그래밍에서 병렬 처리를 위해 사용되는 두 가지 기본 단위\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/cs/thread/\">thread</a>\n<a class=\"internal-link is-unresolved\" href=\"/404\" target=\"\">process</a>",
-		"tags": [ "note"]
-},
-
-{
 		"title": "thread (스레드)",
 		"date":"Sun Jan 28 2024 13:00:17 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/cs/thread (스레드)/",
