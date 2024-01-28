@@ -189,61 +189,6 @@
         
     
                     
-                        
-    
-        <div x-show="isOpen" style="display:none" class="filelist">
-            
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/blogging/study/cs/process/">process </a>
-                </div>
-            
-        </div>
-        
-    
-                    
-                        
-    
-        <div x-show="isOpen" style="display:none" class="filelist">
-            
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/blogging/study/cs/synchronous-and-asynchronous/">synchronous &amp; asynchronous </a>
-                </div>
-            
-        </div>
-        
-    
-                    
-                        
-    
-        <div x-show="isOpen" style="display:none" class="filelist">
-            
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/blogging/study/cs/synchronous/">synchronous </a>
-                </div>
-            
-        </div>
-        
-    
-                    
-                        
-    
-        <div x-show="isOpen" style="display:none" class="filelist">
-            
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/blogging/study/cs/thread-and-process/">thread &amp; process </a>
-                </div>
-            
-        </div>
-        
-    
-                    
-                        
-    
-        <div x-show="isOpen" style="display:none" class="filelist">
-            
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/blogging/study/cs/thread/">thread </a>
-                </div>
-            
-        </div>
-        
-    
-                    
                 </div>
             
         </div>
@@ -786,7 +731,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2024-01-28T12:09:01.222Z';
+        const searchIndexDate = '2024-01-28T12:09:03.184Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -798,9 +743,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2024-01-28T12:09:01.222Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2024-01-28T12:09:03.184Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-01-28T12:09:01.222Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-01-28T12:09:03.184Z', docs}));
             window.docs = docs
             window.index = index;
         }
