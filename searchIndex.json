@@ -1,7 +1,7 @@
 [
 {
 		"title": "asynchronous",
-		"date":"Sun Jan 28 2024 11:24:40 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Jan 28 2024 11:24:42 GMT+0000 (Coordinated Universal Time)",
 		"url":"/study/cs/asynchronous/",
 		"content": "요청과 그 결과가 분리되어 처리되는 것\n요청을 보낸 후 다른 작업을 수행하다가 결과가 돌아오면 처리하는 것\n대규모 데이터 처리나 네트워크 통신 들에서 유용하게 사용",
 		"tags": [ "note"]
@@ -9,7 +9,7 @@
 
 {
 		"title": "process",
-		"date":"Sun Jan 28 2024 11:24:40 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Jan 28 2024 11:24:42 GMT+0000 (Coordinated Universal Time)",
 		"url":"/study/cs/process/",
 		"content": "실행 중인 프로그램의 인스턴스\n자체 메모리 공간(코드, 데이터, 힙, 스택)을 가지며, 운영체제의 관리 하에 독립적으로 실행",
 		"tags": [ "note"]
@@ -17,7 +17,7 @@
 
 {
 		"title": "synchronous & asynchronous",
-		"date":"Sun Jan 28 2024 11:24:40 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Jan 28 2024 11:24:42 GMT+0000 (Coordinated Universal Time)",
 		"url":"/study/cs/synchronous &amp; asynchronous/",
 		"content": "프로그래밍에서 매우 중요한 개념이며, 작업의 실행 방식을 나타내는 용어입니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"undefined\" href=\"/study/cs/synchronous/\">synchronous</a>\n<a class=\"internal-link\" target=\"\" data-note-icon=\"undefined\" href=\"/study/cs/asynchronous/\">asynchronous</a>",
 		"tags": [ "note"]
@@ -25,7 +25,7 @@
 
 {
 		"title": "synchronous",
-		"date":"Sun Jan 28 2024 11:24:40 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Jan 28 2024 11:24:42 GMT+0000 (Coordinated Universal Time)",
 		"url":"/study/cs/synchronous/",
 		"content": "요청과 그 결과가 한번에 처리되는 것\n요청을 보낸 후 결과가 돌아올 때까지 대기하는 것",
 		"tags": [ "note"]
@@ -33,7 +33,7 @@
 
 {
 		"title": "thread & process",
-		"date":"Sun Jan 28 2024 11:24:40 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Jan 28 2024 11:24:42 GMT+0000 (Coordinated Universal Time)",
 		"url":"/study/cs/thread &amp; process/",
 		"content": "스레드와 프로세스는 컴퓨터 프로그래밍에서 병렬 처리를 위해 사용되는 두 가지 기본 단위\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"undefined\" href=\"/study/cs/thread/\">thread</a>\n<a class=\"internal-link\" target=\"\" data-note-icon=\"undefined\" href=\"/study/cs/process/\">process</a>",
 		"tags": [ "note"]
@@ -41,7 +41,7 @@
 
 {
 		"title": "thread",
-		"date":"Sun Jan 28 2024 11:24:40 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Jan 28 2024 11:24:42 GMT+0000 (Coordinated Universal Time)",
 		"url":"/study/cs/thread/",
 		"content": "",
 		"tags": [ "note"]
@@ -49,7 +49,7 @@
 
 {
 		"title": "What is Javascript?",
-		"date":"Sun Jan 28 2024 11:24:40 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Jan 28 2024 11:24:42 GMT+0000 (Coordinated Universal Time)",
 		"url":"/study/language/What is Javascript?/",
 		"content": "",
 		"tags": [ "note"]
@@ -57,7 +57,7 @@
 
 {
 		"title": "Cache",
-		"date":"Sun Jan 28 2024 11:24:40 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Jan 28 2024 11:24:42 GMT+0000 (Coordinated Universal Time)",
 		"url":"/study/web/Cache/",
 		"content": "",
 		"tags": [ "note"]
@@ -65,7 +65,7 @@
 
 {
 		"title": "DNS",
-		"date":"Sun Jan 28 2024 11:24:40 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Jan 28 2024 11:24:42 GMT+0000 (Coordinated Universal Time)",
 		"url":"/study/web/DNS/",
 		"content": "",
 		"tags": [ "note"]
@@ -73,7 +73,7 @@
 
 {
 		"title": "Domain",
-		"date":"Sun Jan 28 2024 11:24:40 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Jan 28 2024 11:24:42 GMT+0000 (Coordinated Universal Time)",
 		"url":"/study/web/Domain/",
 		"content": "",
 		"tags": [ "note"]
@@ -81,7 +81,7 @@
 
 {
 		"title": "HSTS",
-		"date":"Sun Jan 28 2024 11:24:40 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Jan 28 2024 11:24:42 GMT+0000 (Coordinated Universal Time)",
 		"url":"/study/web/HSTS/",
 		"content": "HSTS는 HTTP Strict Transport Security로 Web Site에 접속할 때, 강제적으로 HTTPS Protocol로만 접속하게 하는 기능입니다.",
 		"tags": [ "note"]
@@ -89,7 +89,7 @@
 
 {
 		"title": "HTTP",
-		"date":"Sun Jan 28 2024 11:24:40 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Jan 28 2024 11:24:42 GMT+0000 (Coordinated Universal Time)",
 		"url":"/study/web/HTTP/",
 		"content": "",
 		"tags": [ "note"]
@@ -97,7 +97,7 @@
 
 {
 		"title": "HTTPS",
-		"date":"Sun Jan 28 2024 11:24:40 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Jan 28 2024 11:24:42 GMT+0000 (Coordinated Universal Time)",
 		"url":"/study/web/HTTPS/",
 		"content": "",
 		"tags": [ "note"]
@@ -105,7 +105,7 @@
 
 {
 		"title": "IP",
-		"date":"Sun Jan 28 2024 11:24:40 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Jan 28 2024 11:24:42 GMT+0000 (Coordinated Universal Time)",
 		"url":"/study/web/IP/",
 		"content": "",
 		"tags": [ "note"]
@@ -113,7 +113,7 @@
 
 {
 		"title": "ISP",
-		"date":"Sun Jan 28 2024 11:24:40 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Jan 28 2024 11:24:42 GMT+0000 (Coordinated Universal Time)",
 		"url":"/study/web/ISP/",
 		"content": "",
 		"tags": [ "note"]
@@ -121,7 +121,7 @@
 
 {
 		"title": "reflow",
-		"date":"Sun Jan 28 2024 11:24:40 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Jan 28 2024 11:24:42 GMT+0000 (Coordinated Universal Time)",
 		"url":"/study/web/reflow/",
 		"content": "",
 		"tags": [ "note"]
@@ -129,8 +129,16 @@
 
 {
 		"title": "repaint",
-		"date":"Sun Jan 28 2024 11:24:40 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Jan 28 2024 11:24:42 GMT+0000 (Coordinated Universal Time)",
 		"url":"/study/web/repaint/",
+		"content": "",
+		"tags": [ "note"]
+},
+
+{
+		"title": "request",
+		"date":"Sun Jan 28 2024 11:24:42 GMT+0000 (Coordinated Universal Time)",
+		"url":"/study/web/request/",
 		"content": "",
 		"tags": [ "note"]
 }
