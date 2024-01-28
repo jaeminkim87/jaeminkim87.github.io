@@ -702,7 +702,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2024-01-28T13:09:21.125Z';
+        const searchIndexDate = '2024-01-28T13:20:00.682Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -714,9 +714,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2024-01-28T13:09:21.125Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2024-01-28T13:20:00.682Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-01-28T13:09:21.125Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-01-28T13:20:00.682Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -957,19 +957,21 @@
                 
               
             </div>
-          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2024-01-28T22:05:33.568+09:00"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2024-01-28T22:08:49.784+09:00"></span></div></div></div>
+          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2024-01-28T22:05:33.568+09:00"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2024-01-28T22:19:29.823+09:00"></span></div></div></div>
       
       
       </header>
       
       
-      <h2 id="chat-gpt" tabindex="-1">ChatGPT란?</h2>
+      <h1 id="gpt-4-chat-gpt" tabindex="-1">GPT-4와 ChatGPT 및 랭체인</h1>
+<h2 id="chat-gpt" tabindex="-1">ChatGPT란?</h2>
 <h2 id="gpt-4-gpt-3-5" tabindex="-1">GPT-4와 GPT-3.5란?</h2>
 <h2 id="대규모 언어 모델이란?" tabindex="-1">대규모 언어 모델이란?</h2>
 <h2 id="open-ai-api" tabindex="-1">OpenAI API란?</h2>
 <h2 id="라마인덱스란?" tabindex="-1">라마인덱스란?</h2>
 <h2 id="랭체인이란?" tabindex="-1">랭체인이란?</h2>
 <h2 id="대규모 언어 모델의 활용 사례" tabindex="-1">대규모 언어 모델의 활용 사례</h2>
+<h1 id="인공지능과 머신러닝 및 딥러닝" tabindex="-1">인공지능과 머신러닝 및 딥러닝</h1>
 
       
       
@@ -1210,6 +1212,10 @@
                                           <nav class="toc">
                 <ol>
                     
+                    <li><a href="#gpt-4-chat-gpt">GPT-4와 ChatGPT 및 랭체인</a>
+            
+                <ol>
+                    
                     <li><a href="#chat-gpt">ChatGPT란?</a>
             		</li>
 
@@ -1229,6 +1235,11 @@
             		</li>
 
                     <li><a href="#대규모 언어 모델의 활용 사례">대규모 언어 모델의 활용 사례</a>
+            		</li>
+                </ol>
+            		</li>
+
+                    <li><a href="#인공지능과 머신러닝 및 딥러닝">인공지능과 머신러닝 및 딥러닝</a>
             		</li>
                 </ol>
             </nav>
