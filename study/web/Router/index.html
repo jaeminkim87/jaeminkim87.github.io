@@ -467,6 +467,17 @@
         
     
                     
+                        
+    
+        <div x-show="isOpen" style="display:none" class="filelist">
+            
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/blogging/study/web/what-is-done-when-you-enter-a-url-in-your-browser/">What is done when you enter a URL in your browser </a>
+                </div>
+            
+        </div>
+        
+    
+                    
                 </div>
             
         </div>
@@ -507,17 +518,6 @@
                     
                         
     
-    
-                    
-                        
-    
-        <div x-show="isOpen" style="display:none" class="filelist">
-            
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/study/cs/asynchronous/">asynchronous </a>
-                </div>
-            
-        </div>
-        
     
                     
                         
@@ -1006,7 +1006,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2024-01-28T12:09:27.090Z';
+        const searchIndexDate = '2024-01-28T12:09:31.256Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -1018,9 +1018,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2024-01-28T12:09:27.090Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2024-01-28T12:09:31.256Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-01-28T12:09:27.090Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-01-28T12:09:31.256Z', docs}));
             window.docs = docs
             window.index = index;
         }
