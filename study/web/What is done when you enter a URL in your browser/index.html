@@ -528,28 +528,6 @@
     
         <div x-show="isOpen" style="display:none" class="filelist">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/study/web/TCP/">TCP </a>
-                </div>
-            
-        </div>
-        
-    
-                    
-                        
-    
-        <div x-show="isOpen" style="display:none" class="filelist">
-            
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/study/web/URL/">URL </a>
-                </div>
-            
-        </div>
-        
-    
-                    
-                        
-    
-        <div x-show="isOpen" style="display:none" class="filelist">
-            
                 <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/study/web/What is done when you enter a URL in your browser/">What is done when you enter a URL in your browser </a>
                 </div>
             
@@ -744,7 +722,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2024-01-28T12:10:01.572Z';
+        const searchIndexDate = '2024-01-28T12:10:01.986Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -756,9 +734,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2024-01-28T12:10:01.572Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2024-01-28T12:10:01.986Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-01-28T12:10:01.572Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-01-28T12:10:01.986Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1007,11 +985,11 @@
       
       <p>다음과 같은 순서로 진행 됩니다.</p>
 <ol>
-<li>브라우저에 <a class="internal-link" target="" data-note-icon="" href="/study/web/URL/">URL</a> 주소를 넣습니다.</li>
-<li>브라우저에서 <a class="internal-link" target="" data-note-icon="" href="/study/web/URL/">URL</a>를 해석합니다.
+<li>브라우저에 <a class="internal-link is-unresolved" href="/404" target="">URL</a> 주소를 넣습니다.</li>
+<li>브라우저에서 <a class="internal-link is-unresolved" href="/404" target="">URL</a>를 해석합니다.
 <ol>
-<li><a class="internal-link" target="" data-note-icon="" href="/study/web/URL/">URL</a> 문법이 맞지 않다면 기본 검색 엔진으로 검색</li>
-<li><a class="internal-link" target="" data-note-icon="" href="/study/web/URL/">URL</a> 문법이 맞다면, <a class="internal-link" target="" data-note-icon="" href="/study/web/URL/">URL</a>의 호스트 부분을 인코딩합니다.
+<li><a class="internal-link is-unresolved" href="/404" target="">URL</a> 문법이 맞지 않다면 기본 검색 엔진으로 검색</li>
+<li><a class="internal-link is-unresolved" href="/404" target="">URL</a> 문법이 맞다면, <a class="internal-link is-unresolved" href="/404" target="">URL</a>의 호스트 부분을 인코딩합니다.
 <ol>
 <li><a class="internal-link is-unresolved" href="/404" target="">HSTS</a> 확인하고 있으면 <a class="internal-link is-unresolved" href="/404" target="">HTTPS</a>로 요청합니다.</li>
 <li>없으면 <a class="internal-link is-unresolved" href="/404" target="">HTTP</a>로 요청합니다.</li>
@@ -1019,7 +997,7 @@
 </li>
 </ol>
 </li>
-<li>브라우저는 캐싱 된 <a class="internal-link is-unresolved" href="/404" target="">DNS</a> 기록들에서 해당 <a class="internal-link" target="" data-note-icon="" href="/study/web/URL/">URL</a>에 대응되는 <a class="internal-link is-unresolved" href="/404" target="">IP</a> 주소가 있는지 확인합니다.
+<li>브라우저는 캐싱 된 <a class="internal-link is-unresolved" href="/404" target="">DNS</a> 기록들에서 해당 <a class="internal-link is-unresolved" href="/404" target="">URL</a>에 대응되는 <a class="internal-link is-unresolved" href="/404" target="">IP</a> 주소가 있는지 확인합니다.
 <ol>
 <li><a class="internal-link is-unresolved" href="/404" target="">DNS</a>의 목적은 편의성 제공이며, 캐싱은 네트워크 트래픽을 조절하고 데이터 전송 시간을 줄입니다.</li>
 <li>DNS query로 먼저 브라우저 <a class="internal-link is-unresolved" href="/404" target="">Cache</a>를 확인합니다.</li>
@@ -1028,8 +1006,8 @@
 <li>없다면 <a class="internal-link is-unresolved" href="/404" target="">ISP</a> <a class="internal-link is-unresolved" href="/404" target="">Cache</a>를 확인합니다.</li>
 </ol>
 </li>
-<li>요청한 <a class="internal-link" target="" data-note-icon="" href="/study/web/URL/">URL</a>이 <a class="internal-link is-unresolved" href="/404" target="">Cache</a>에 없다면 <a class="internal-link is-unresolved" href="/404" target="">ISP</a>의 <a class="internal-link is-unresolved" href="/404" target="">DNS</a>서버가 해당 <a class="internal-link is-unresolved" href="/404" target="">Domain</a> 호스팅하고 있는 서버의 <a class="internal-link is-unresolved" href="/404" target="">IP</a> 주소를 찾기 위해 DNS query를 ??에 보냅니다.</li>
-<li>브라우저가 서버와 <a class="internal-link" target="" data-note-icon="" href="/study/web/TCP/">TCP</a> 커넥션을 합니다.</li>
+<li>요청한 <a class="internal-link is-unresolved" href="/404" target="">URL</a>이 <a class="internal-link is-unresolved" href="/404" target="">Cache</a>에 없다면 <a class="internal-link is-unresolved" href="/404" target="">ISP</a>의 <a class="internal-link is-unresolved" href="/404" target="">DNS</a>서버가 해당 <a class="internal-link is-unresolved" href="/404" target="">Domain</a> 호스팅하고 있는 서버의 <a class="internal-link is-unresolved" href="/404" target="">IP</a> 주소를 찾기 위해 DNS query를 ??에 보냅니다.</li>
+<li>브라우저가 서버와 <a class="internal-link is-unresolved" href="/404" target="">TCP</a> 커넥션을 합니다.</li>
 <li>브라우저가 웹 서버에 <a class="internal-link is-unresolved" href="/404" target="">HTTP</a> 요청을 합니다.</li>
 <li>서버가 요청을 처리하고 <a class="internal-link is-unresolved" href="/404" target="">response</a>를 생성합니다.</li>
 <li>서버가 HTTP response를 보냅니다.</li>
