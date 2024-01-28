@@ -74,7 +74,7 @@
 {
 		"title": "Domain",
 		"date":"Sun Jan 28 2024 12:15:44 GMT+0000 (Coordinated Universal Time)",
-		"url":"/Blogging/study/web/Domain/",
+		"url":"/blogging/study/web/domain/",
 		"content": "",
 		"tags": [ "note"]
 },
@@ -82,7 +82,7 @@
 {
 		"title": "HSTS",
 		"date":"Sun Jan 28 2024 12:15:44 GMT+0000 (Coordinated Universal Time)",
-		"url":"/Blogging/study/web/HSTS/",
+		"url":"/blogging/study/web/hsts/",
 		"content": "HSTS는 HTTP Strict Transport Security로 Web Site에 접속할 때, 강제적으로 HTTPS Protocol로만 접속하게 하는 기능입니다.",
 		"tags": [ "note"]
 },
@@ -90,7 +90,7 @@
 {
 		"title": "HTTP",
 		"date":"Sun Jan 28 2024 12:15:44 GMT+0000 (Coordinated Universal Time)",
-		"url":"/Blogging/study/web/HTTP/",
+		"url":"/blogging/study/web/http/",
 		"content": "",
 		"tags": [ "note"]
 },
@@ -98,7 +98,7 @@
 {
 		"title": "HTTPS",
 		"date":"Sun Jan 28 2024 12:15:44 GMT+0000 (Coordinated Universal Time)",
-		"url":"/Blogging/study/web/HTTPS/",
+		"url":"/blogging/study/web/https/",
 		"content": "",
 		"tags": [ "note"]
 },
@@ -147,7 +147,7 @@
 		"title": "What is done when you enter a URL in your browser",
 		"date":"Sun Jan 28 2024 12:15:44 GMT+0000 (Coordinated Universal Time)",
 		"url":"/blogging/study/web/what-is-done-when-you-enter-a-url-in-your-browser/",
-		"content": "다음과 같은 순서로 진행 됩니다.\n\n브라우저에 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/url/\">URL</a> 주소를 넣습니다.\n브라우저에서 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/url/\">URL</a>를 해석합니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/url/\">URL</a> 문법이 맞지 않다면 기본 검색 엔진으로 검색\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/url/\">URL</a> 문법이 맞다면, <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/url/\">URL</a>의 호스트 부분을 인코딩합니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/HSTS/\">HSTS</a> 확인하고 있으면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/HTTPS/\">HTTPS</a>로 요청합니다.\n없으면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/HTTP/\">HTTP</a>로 요청합니다.\n\n브라우저는 캐싱 된 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/DNS/\">DNS</a> 기록들에서 해당 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/url/\">URL</a>에 대응되는 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/ip/\">IP</a> 주소가 있는지 확인합니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/DNS/\">DNS</a>의 목적은 편의성 제공이며, 캐싱은 네트워크 트래픽을 조절하고 데이터 전송 시간을 줄입니다.\nDNS query로 먼저 브라우저 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>를 확인합니다.\n없다면 OS <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>를 확인합니다.\n없다면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/router/\">Router</a> <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>를 확인합니다.\n없다면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/isp/\">ISP</a> <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>를 확인합니다.\n\n요청한 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/url/\">URL</a>이 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>에 없다면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/isp/\">ISP</a>의 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/DNS/\">DNS</a>서버가 해당 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Domain/\">Domain</a> 호스팅하고 있는 서버의 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/ip/\">IP</a> 주소를 찾기 위해 DNS query를 ??에 보냅니다.\n브라우저가 서버와 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/tcp/\">TCP</a> 커넥션을 합니다.\n브라우저가 웹 서버에 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/HTTP/\">HTTP</a> 요청을 합니다.\n서버가 요청을 처리하고 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/response/\">response</a>를 생성합니다.\n서버가 HTTP response를 보냅니다.\n브라우저가 받은 response의 body부분으로 content를 보여줍니다.\n\nDOM tree 생성을 합니다.\nCSSOM tree를 생성합니다.\n렌더링 tree 생성합니다.\nJavascript 파싱과 실행을 합니다.\n레이아웃을 그립니다.\n페이팅을 합니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/reflow/\">reflow</a>\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/repaint/\">repaint</a>",
+		"content": "다음과 같은 순서로 진행 됩니다.\n\n브라우저에 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/url/\">URL</a> 주소를 넣습니다.\n브라우저에서 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/url/\">URL</a>를 해석합니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/url/\">URL</a> 문법이 맞지 않다면 기본 검색 엔진으로 검색\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/url/\">URL</a> 문법이 맞다면, <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/url/\">URL</a>의 호스트 부분을 인코딩합니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/hsts/\">HSTS</a> 확인하고 있으면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/https/\">HTTPS</a>로 요청합니다.\n없으면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/http/\">HTTP</a>로 요청합니다.\n\n브라우저는 캐싱 된 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/DNS/\">DNS</a> 기록들에서 해당 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/url/\">URL</a>에 대응되는 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/ip/\">IP</a> 주소가 있는지 확인합니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/DNS/\">DNS</a>의 목적은 편의성 제공이며, 캐싱은 네트워크 트래픽을 조절하고 데이터 전송 시간을 줄입니다.\nDNS query로 먼저 브라우저 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>를 확인합니다.\n없다면 OS <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>를 확인합니다.\n없다면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/router/\">Router</a> <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>를 확인합니다.\n없다면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/isp/\">ISP</a> <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>를 확인합니다.\n\n요청한 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/url/\">URL</a>이 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>에 없다면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/isp/\">ISP</a>의 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/DNS/\">DNS</a>서버가 해당 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/domain/\">Domain</a> 호스팅하고 있는 서버의 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/ip/\">IP</a> 주소를 찾기 위해 DNS query를 ??에 보냅니다.\n브라우저가 서버와 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/tcp/\">TCP</a> 커넥션을 합니다.\n브라우저가 웹 서버에 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/http/\">HTTP</a> 요청을 합니다.\n서버가 요청을 처리하고 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/response/\">response</a>를 생성합니다.\n서버가 HTTP response를 보냅니다.\n브라우저가 받은 response의 body부분으로 content를 보여줍니다.\n\nDOM tree 생성을 합니다.\nCSSOM tree를 생성합니다.\n렌더링 tree 생성합니다.\nJavascript 파싱과 실행을 합니다.\n레이아웃을 그립니다.\n페이팅을 합니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/reflow/\">reflow</a>\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/blogging/study/web/repaint/\">repaint</a>",
 		"tags": [ "note"]
 },
 
