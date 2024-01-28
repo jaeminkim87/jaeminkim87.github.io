@@ -1,1 +1,17 @@
-[]
+[
+{
+		"title": "asynchronous",
+		"date":"Sun Jan 28 2024 11:24:24 GMT+0000 (Coordinated Universal Time)",
+		"url":"/study/cs/asynchronous/",
+		"content": "요청과 그 결과가 분리되어 처리되는 것\n요청을 보낸 후 다른 작업을 수행하다가 결과가 돌아오면 처리하는 것\n대규모 데이터 처리나 네트워크 통신 들에서 유용하게 사용",
+		"tags": [ "note"]
+},
+
+{
+		"title": "process",
+		"date":"Sun Jan 28 2024 11:24:24 GMT+0000 (Coordinated Universal Time)",
+		"url":"/study/cs/process/",
+		"content": "실행 중인 프로그램의 인스턴스\n자체 메모리 공간(코드, 데이터, 힙, 스택)을 가지며, 운영체제의 관리 하에 독립적으로 실행",
+		"tags": [ "note"]
+}
+]
