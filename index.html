@@ -448,7 +448,7 @@
     
         <div x-show="isOpen" style="display:none" class="filelist">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/Blogging/study/web/TCP/">TCP </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/blogging/study/web/tcp/">TCP </a>
                 </div>
             
         </div>
@@ -459,7 +459,7 @@
     
         <div x-show="isOpen" style="display:none" class="filelist">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/Blogging/study/web/URL/">URL </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/blogging/study/web/url/">URL </a>
                 </div>
             
         </div>
@@ -470,7 +470,7 @@
     
         <div x-show="isOpen" style="display:none" class="filelist">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/Blogging/study/web/What is done when you enter a URL in your browser/">What is done when you enter a URL in your browser </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/blogging/study/web/what-is-done-when-you-enter-a-url-in-your-browser/">What is done when you enter a URL in your browser </a>
                 </div>
             
         </div>
@@ -669,7 +669,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2024-01-28T12:16:21.682Z';
+        const searchIndexDate = '2024-01-28T12:16:23.224Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -681,9 +681,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2024-01-28T12:16:21.682Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2024-01-28T12:16:23.224Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-01-28T12:16:21.682Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-01-28T12:16:23.224Z', docs}));
             window.docs = docs
             window.index = index;
         }
