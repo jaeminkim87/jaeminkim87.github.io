@@ -3,27 +3,57 @@
     
         <url>
             <loc>/404/</loc>
-            <lastmod>2024-01-28T11:24:29.164Z</lastmod>
+            <lastmod>2024-01-28T11:24:33.801Z</lastmod>
         </url>
     
         <url>
             <loc>/study/cs/asynchronous/</loc>
-            <lastmod>2024-01-28T11:24:29.168Z</lastmod>
+            <lastmod>2024-01-28T11:24:33.805Z</lastmod>
         </url>
     
         <url>
             <loc>/study/cs/process/</loc>
-            <lastmod>2024-01-28T11:24:29.168Z</lastmod>
+            <lastmod>2024-01-28T11:24:33.805Z</lastmod>
         </url>
     
         <url>
             <loc>/study/cs/synchronous &amp; asynchronous/</loc>
-            <lastmod>2024-01-28T11:24:29.168Z</lastmod>
+            <lastmod>2024-01-28T11:24:33.805Z</lastmod>
         </url>
     
         <url>
             <loc>/study/cs/synchronous/</loc>
-            <lastmod>2024-01-28T11:24:29.168Z</lastmod>
+            <lastmod>2024-01-28T11:24:33.805Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/study/cs/thread &amp; process/</loc>
+            <lastmod>2024-01-28T11:24:33.805Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/study/cs/thread/</loc>
+            <lastmod>2024-01-28T11:24:33.805Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/study/language/What is Javascript?/</loc>
+            <lastmod>2024-01-28T11:24:33.805Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/study/web/Cache/</loc>
+            <lastmod>2024-01-28T11:24:33.805Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/study/web/DNS/</loc>
+            <lastmod>2024-01-28T11:24:33.805Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/study/web/Domain/</loc>
+            <lastmod>2024-01-28T11:24:33.805Z</lastmod>
         </url>
     
 </urlset>
