@@ -528,28 +528,6 @@
     
         <div x-show="isOpen" style="display:none" class="filelist">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/study/web/IP/">IP </a>
-                </div>
-            
-        </div>
-        
-    
-                    
-                        
-    
-        <div x-show="isOpen" style="display:none" class="filelist">
-            
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/study/web/ISP/">ISP </a>
-                </div>
-            
-        </div>
-        
-    
-                    
-                        
-    
-        <div x-show="isOpen" style="display:none" class="filelist">
-            
                 <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/study/web/reflow/">reflow </a>
                 </div>
             
@@ -821,7 +799,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2024-01-28T12:09:51.169Z';
+        const searchIndexDate = '2024-01-28T12:09:52.977Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -833,9 +811,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2024-01-28T12:09:51.169Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2024-01-28T12:09:52.977Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-01-28T12:09:51.169Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-01-28T12:09:52.977Z', docs}));
             window.docs = docs
             window.index = index;
         }
