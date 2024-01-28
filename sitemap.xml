@@ -3,22 +3,27 @@
     
         <url>
             <loc>/404/</loc>
-            <lastmod>2024-01-28T11:24:25.978Z</lastmod>
+            <lastmod>2024-01-28T11:24:29.164Z</lastmod>
         </url>
     
         <url>
             <loc>/study/cs/asynchronous/</loc>
-            <lastmod>2024-01-28T11:24:25.982Z</lastmod>
+            <lastmod>2024-01-28T11:24:29.168Z</lastmod>
         </url>
     
         <url>
             <loc>/study/cs/process/</loc>
-            <lastmod>2024-01-28T11:24:25.982Z</lastmod>
+            <lastmod>2024-01-28T11:24:29.168Z</lastmod>
         </url>
     
         <url>
             <loc>/study/cs/synchronous &amp; asynchronous/</loc>
-            <lastmod>2024-01-28T11:24:25.982Z</lastmod>
+            <lastmod>2024-01-28T11:24:29.168Z</lastmod>
+        </url>
+    
+        <url>
+            <loc>/study/cs/synchronous/</loc>
+            <lastmod>2024-01-28T11:24:29.168Z</lastmod>
         </url>
     
 </urlset>
