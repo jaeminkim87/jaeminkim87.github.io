@@ -735,7 +735,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2024-02-04T04:01:52.545Z';
+        const searchIndexDate = '2024-02-04T04:19:47.929Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -747,9 +747,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2024-02-04T04:01:52.545Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2024-02-04T04:19:47.929Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-02-04T04:01:52.545Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-02-04T04:19:47.929Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -990,7 +990,7 @@
                 
               
             </div>
-          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2023-10-30T20:56:28.118+09:00"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2024-02-04T10:05:55.645+09:00"></span></div></div></div>
+          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2023-10-30T20:56:28.118+09:00"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2024-02-04T13:19:19.324+09:00"></span></div></div></div>
       
       
       </header>
@@ -1040,6 +1040,7 @@
 </ol>
 </li>
 </ol>
+<p><a class="tag" onclick="toggleTagSearch(this)" data-content="#web">#web</a> <a class="tag" onclick="toggleTagSearch(this)" data-content="#browser">#browser</a> <a class="tag" onclick="toggleTagSearch(this)" data-content="#interview">#interview</a> <a class="tag" onclick="toggleTagSearch(this)" data-content="#frontend">#frontend</a></p>
 
       
       
