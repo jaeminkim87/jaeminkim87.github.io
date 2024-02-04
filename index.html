@@ -733,7 +733,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2024-02-04T01:33:26.094Z';
+        const searchIndexDate = '2024-02-04T02:10:07.641Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -745,9 +745,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2024-02-04T01:33:26.094Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2024-02-04T02:10:07.641Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-02-04T01:33:26.094Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-02-04T02:10:07.641Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -997,7 +997,8 @@
       </header>
       
       
-      <p>이곳은 공부를 한것에 대해서 정리하거나 생각을 정리하는 곳입니다.</p>
+      <p>이곳은 공부를 한 것에 대해서 정리하거나 생각을 정리하는 곳입니다.</p>
+<p>아직은 빈 페이지가 많지만 열심히 채울 예정입니다.</p>
 
       
       
