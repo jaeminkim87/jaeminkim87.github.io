@@ -735,7 +735,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2024-02-04T01:33:17.058Z';
+        const searchIndexDate = '2024-02-04T01:33:26.094Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -747,9 +747,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2024-02-04T01:33:17.058Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2024-02-04T01:33:26.094Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-02-04T01:33:17.058Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-02-04T01:33:26.094Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -996,7 +996,23 @@
       </header>
       
       
-      <p><img src="/img/user/assets/images/IMG_3092.webp" alt="IMG_3092.webp"></p>
+      <p><picture src="/img/user/assets/images/IMG_3092.webp" alt="IMG_3092.webp"><source       media="(max-width:480px)"
+      srcset="/img/optimized/pXMx6uuUs8-500.webp"
+      type="image/webp"
+      >
+      <source       media="(max-width:480px)"
+      srcset="/img/optimized/pXMx6uuUs8-500.jpeg"
+      >
+      <source         media="(max-width:1920px)"
+        srcset="/img/optimized/pXMx6uuUs8-700.webp"
+        type="image/webp"
+        ><source         media="(max-width:1920px)"
+        srcset="/img/optimized/pXMx6uuUs8-700.jpeg"
+        ><img       class=""
+      src="/img/user/assets/images/IMG_3092.webp"
+      alt="IMG_3092.webp"
+      width=""
+      ></picture></p>
 <p>간만에 <a href="https://naver.me/x6PUf1h1" target="_blank" class="external-link">브라우니70 본점</a>에 와서 스터디 하는 중.<br>
 공부 할 것이 많다...</p>
 
