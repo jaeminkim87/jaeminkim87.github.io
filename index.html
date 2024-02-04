@@ -226,17 +226,6 @@
     
         <div x-show="isOpen" style="display:none" class="filelist">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/Blogging/study/books/GPT-4+ChatGPT+라마인덱스+랭체인을 활용한 인공지능 프로그래밍/1장 GPT-4, ChatGPT, 랭체인 개요/">1장 GPT-4, ChatGPT, 랭체인 개요 </a>
-                </div>
-            
-        </div>
-        
-    
-                    
-                        
-    
-        <div x-show="isOpen" style="display:none" class="filelist">
-            
                 <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/Blogging/study/books/GPT-4+ChatGPT+라마인덱스+랭체인을 활용한 인공지능 프로그래밍/1장/">1장 GPT-4, ChatGPT, 랭체인 개요 </a>
                 </div>
             
@@ -744,7 +733,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2024-02-04T04:19:54.202Z';
+        const searchIndexDate = '2024-02-04T04:19:58.779Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -756,9 +745,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2024-02-04T04:19:54.202Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2024-02-04T04:19:58.779Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-02-04T04:19:54.202Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-02-04T04:19:58.779Z', docs}));
             window.docs = docs
             window.index = index;
         }
