@@ -1,7 +1,7 @@
 [
 {
 		"title": "[24.02.04] 일상",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/daily/24-02-04/",
 		"content": "간만에 브라우니70 본점에 와서 스터디 하는 중.\n공부 할 것이 많다...\n#daily #일상",
 		"tags": ["daily", "일상", "note"]
@@ -9,15 +9,23 @@
 
 {
 		"title": "1장 GPT-4, ChatGPT, 랭체인 개요",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/books/GPT-4+ChatGPT+라마인덱스+랭체인을 활용한 인공지능 프로그래밍/1장 GPT-4, ChatGPT, 랭체인 개요/",
 		"content": "GPT-4와 ChatGPT 및 랭체인\nChatGPT란?\nGPT-4와 GPT-3.5란?\n대규모 언어 모델이란?\nOpenAI API란?\n라마인덱스란?\n랭체인이란?\n대규모 언어 모델의 활용 사례\n인공지능과 머신러닝 및 딥러닝",
 		"tags": [ "note"]
 },
 
 {
+		"title": "1장 GPT-4, ChatGPT, 랭체인 개요",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
+		"url":"/Blogging/study/books/GPT-4+ChatGPT+라마인덱스+랭체인을 활용한 인공지능 프로그래밍/1장/",
+		"content": "GPT-4와 ChatGPT 및 랭체인\nChatGPT란?\nGPT-4와 GPT-3.5란?\n대규모 언어 모델이란?\nOpenAI API란?\n라마인덱스란?\n랭체인이란?\n대규모 언어 모델의 활용 사례\n인공지능과 머신러닝 및 딥러닝\n#chatgpt #langchain #랭체인 #라마인덱스 #인공지능 #머신러닝 #딥러닝",
+		"tags": ["chatgpt", "langchain", "랭체인", "라마인덱스", "인공지능", "머신러닝", "딥러닝", "note"]
+},
+
+{
 		"title": "asynchronous (비동기)",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/cs/asynchronous (비동기)/",
 		"content": "요청과 그 결과가 분리되어 처리되는 것\n요청을 보낸 후 다른 작업을 수행하다가 결과가 돌아오면 처리하는 것\n대규모 데이터 처리나 네트워크 통신 들에서 유용하게 사용",
 		"tags": [ "note"]
@@ -25,7 +33,7 @@
 
 {
 		"title": "process (프로세스)",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/cs/process (프로세스)/",
 		"content": "실행 중인 프로그램의 인스턴스\n자체 메모리 공간(코드, 데이터, 힙, 스택)을 가지며, 운영체제의 관리 하에 독립적으로 실행",
 		"tags": [ "note"]
@@ -33,7 +41,7 @@
 
 {
 		"title": "synchronous (동기)",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/cs/synchronous (동기)/",
 		"content": "요청과 그 결과가 한번에 처리되는 것\n요청을 보낸 후 결과가 돌아올 때까지 대기하는 것",
 		"tags": [ "note"]
@@ -41,7 +49,7 @@
 
 {
 		"title": "thread (스레드)",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/cs/thread (스레드)/",
 		"content": "",
 		"tags": [ "note"]
@@ -49,7 +57,7 @@
 
 {
 		"title": "Javascript에 대해서",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/language/Javascript에 대해서/",
 		"content": "",
 		"tags": [ "note"]
@@ -57,7 +65,7 @@
 
 {
 		"title": "Cache",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/Cache/",
 		"content": "",
 		"tags": [ "note"]
@@ -65,7 +73,7 @@
 
 {
 		"title": "DNS",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/DNS/",
 		"content": "",
 		"tags": [ "note"]
@@ -73,7 +81,7 @@
 
 {
 		"title": "Domain",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/Domain/",
 		"content": "",
 		"tags": [ "note"]
@@ -81,7 +89,7 @@
 
 {
 		"title": "HSTS",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/HSTS/",
 		"content": "HSTS는 HTTP Strict Transport Security로 Web Site에 접속할 때, 강제적으로 HTTPS Protocol로만 접속하게 하는 기능입니다.",
 		"tags": [ "note"]
@@ -89,7 +97,7 @@
 
 {
 		"title": "HTTP",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/HTTP/",
 		"content": "",
 		"tags": [ "note"]
@@ -97,7 +105,7 @@
 
 {
 		"title": "HTTPS",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/HTTPS/",
 		"content": "",
 		"tags": [ "note"]
@@ -105,7 +113,7 @@
 
 {
 		"title": "IP",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/IP/",
 		"content": "",
 		"tags": [ "note"]
@@ -113,7 +121,7 @@
 
 {
 		"title": "ISP",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/ISP/",
 		"content": "",
 		"tags": [ "note"]
@@ -121,7 +129,7 @@
 
 {
 		"title": "Router",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/Router/",
 		"content": "",
 		"tags": [ "note"]
@@ -129,7 +137,7 @@
 
 {
 		"title": "TCP",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/TCP/",
 		"content": "",
 		"tags": [ "note"]
@@ -137,7 +145,7 @@
 
 {
 		"title": "URL",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/URL/",
 		"content": "",
 		"tags": [ "note"]
@@ -145,15 +153,15 @@
 
 {
 		"title": "브라우저에 URL를 넣었을 때 어찌 되는가?",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/What is done when you enter a URL in your browser/",
-		"content": "다음과 같은 순서로 진행 됩니다.\n\n브라우저에 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a> 주소를 넣습니다.\n브라우저에서 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a>를 해석합니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a> 문법이 맞지 않다면 기본 검색 엔진으로 검색\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a> 문법이 맞다면, <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a>의 호스트 부분을 인코딩합니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/HSTS/\">HSTS</a> 확인하고 있으면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/HTTPS/\">HTTPS</a>로 요청합니다.\n없으면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/HTTP/\">HTTP</a>로 요청합니다.\n\n브라우저는 캐싱 된 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/DNS/\">DNS</a> 기록들에서 해당 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a>에 대응되는 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/IP/\">IP</a> 주소가 있는지 확인합니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/DNS/\">DNS</a>의 목적은 편의성 제공이며, 캐싱은 네트워크 트래픽을 조절하고 데이터 전송 시간을 줄입니다.\nDNS query로 먼저 브라우저 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>를 확인합니다.\n없다면 OS <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>를 확인합니다.\n없다면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Router/\">Router</a> <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>를 확인합니다.\n없다면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/ISP/\">ISP</a> <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>를 확인합니다.\n\n요청한 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a>이 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>에 없다면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/ISP/\">ISP</a>의 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/DNS/\">DNS</a>서버가 해당 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Domain/\">Domain</a> 호스팅하고 있는 서버의 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/IP/\">IP</a> 주소를 찾기 위해 DNS query를 ??에 보냅니다.\n브라우저가 서버와 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/TCP/\">TCP</a> 커넥션을 합니다.\n브라우저가 웹 서버에 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/HTTP/\">HTTP</a> 요청을 합니다.\n서버가 요청을 처리하고 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/response/\">response</a>를 생성합니다.\n서버가 HTTP response를 보냅니다.\n브라우저가 받은 response의 body부분으로 content를 보여줍니다.\n\nDOM tree 생성을 합니다.\nCSSOM tree를 생성합니다.\n렌더링 tree 생성합니다.\nJavascript 파싱과 실행을 합니다.\n레이아웃을 그립니다.\n페이팅을 합니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/reflow/\">reflow</a>\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/repaint/\">repaint</a>",
-		"tags": [ "note"]
+		"content": "다음과 같은 순서로 진행 됩니다.\n\n브라우저에 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a> 주소를 넣습니다.\n브라우저에서 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a>를 해석합니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a> 문법이 맞지 않다면 기본 검색 엔진으로 검색\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a> 문법이 맞다면, <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a>의 호스트 부분을 인코딩합니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/HSTS/\">HSTS</a> 확인하고 있으면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/HTTPS/\">HTTPS</a>로 요청합니다.\n없으면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/HTTP/\">HTTP</a>로 요청합니다.\n\n브라우저는 캐싱 된 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/DNS/\">DNS</a> 기록들에서 해당 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a>에 대응되는 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/IP/\">IP</a> 주소가 있는지 확인합니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/DNS/\">DNS</a>의 목적은 편의성 제공이며, 캐싱은 네트워크 트래픽을 조절하고 데이터 전송 시간을 줄입니다.\nDNS query로 먼저 브라우저 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>를 확인합니다.\n없다면 OS <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>를 확인합니다.\n없다면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Router/\">Router</a> <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>를 확인합니다.\n없다면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/ISP/\">ISP</a> <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>를 확인합니다.\n\n요청한 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a>이 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>에 없다면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/ISP/\">ISP</a>의 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/DNS/\">DNS</a>서버가 해당 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Domain/\">Domain</a> 호스팅하고 있는 서버의 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/IP/\">IP</a> 주소를 찾기 위해 DNS query를 ??에 보냅니다.\n브라우저가 서버와 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/TCP/\">TCP</a> 커넥션을 합니다.\n브라우저가 웹 서버에 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/HTTP/\">HTTP</a> 요청을 합니다.\n서버가 요청을 처리하고 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/response/\">response</a>를 생성합니다.\n서버가 HTTP response를 보냅니다.\n브라우저가 받은 response의 body부분으로 content를 보여줍니다.\n\nDOM tree 생성을 합니다.\nCSSOM tree를 생성합니다.\n렌더링 tree 생성합니다.\nJavascript 파싱과 실행을 합니다.\n레이아웃을 그립니다.\n페이팅을 합니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/reflow/\">reflow</a>\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/repaint/\">repaint</a>\n\n#web #browser #interview #frontend",
+		"tags": ["web", "browser", "interview", "frontend", "note"]
 },
 
 {
 		"title": "reflow",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/reflow/",
 		"content": "",
 		"tags": [ "note"]
@@ -161,7 +169,7 @@
 
 {
 		"title": "repaint",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/repaint/",
 		"content": "",
 		"tags": [ "note"]
@@ -169,7 +177,7 @@
 
 {
 		"title": "request",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/request/",
 		"content": "",
 		"tags": [ "note"]
@@ -177,7 +185,7 @@
 
 {
 		"title": "response",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/response/",
 		"content": "",
 		"tags": [ "note"]
@@ -185,7 +193,7 @@
 
 {
 		"title": "Welcome",
-		"date":"Sun Feb 04 2024 04:19:38 GMT+0000 (Coordinated Universal Time)",
+		"date":"Sun Feb 04 2024 04:19:39 GMT+0000 (Coordinated Universal Time)",
 		"url":"/",
 		"content": "이곳은 공부를 한 것에 대해서 정리하거나 생각을 정리하는 곳입니다.\n아직은 빈 페이지가 많지만 열심히 채울 예정입니다.",
 		"tags": [ "note","gardenEntry"]
