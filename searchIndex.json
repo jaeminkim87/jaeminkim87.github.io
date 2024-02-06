@@ -1,7 +1,7 @@
 [
 {
 		"title": "[24.02.04] 일상",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/daily/24-02-04/",
 		"content": "간만에 브라우니70 본점에 와서 스터디 하는 중.\n공부 할 것이 많다...\n#daily #일상",
 		"tags": ["daily", "일상", "note"]
@@ -9,7 +9,7 @@
 
 {
 		"title": "1장 GPT-4, ChatGPT, 랭체인 개요",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/books/GPT-4+ChatGPT+라마인덱스+랭체인을 활용한 인공지능 프로그래밍/1장/",
 		"content": "GPT-4와 ChatGPT 및 랭체인\nChatGPT란?\nGPT-4와 GPT-3.5란?\n대규모 언어 모델이란?\nOpenAI API란?\n라마인덱스란?\n랭체인이란?\n대규모 언어 모델의 활용 사례\n인공지능과 머신러닝 및 딥러닝\n#chatgpt #langchain #랭체인 #라마인덱스 #인공지능 #머신러닝 #딥러닝",
 		"tags": ["chatgpt", "langchain", "랭체인", "라마인덱스", "인공지능", "머신러닝", "딥러닝", "note"]
@@ -17,7 +17,7 @@
 
 {
 		"title": "6장 랭체인(LangChain)",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/books/GPT-4+ChatGPT+라마인덱스+랭체인을 활용한 인공지능 프로그래밍/2장/",
 		"content": "랭체인이란?\n\n언어 모델을 기반으로 하는 애플리케이션을 개발하기 위한 프레임워크\nLangChain 라이브러리\n\nPython 및 JavaScript 라이브러리. 수많은 구성 요소에 대한 인터페이스 및 통합, 이러한 구성 요소를 체인 및 에이전트로 결합하기 위한 기본 런타임, 체인 및 에이전트의 구성\n\n서비스 구조\n\nLangChain 템플릿\n\n다양한 작업을 위해 쉽게 배포할 수 있는 참조 아키텍처 모음\n\nLangServe\n\nLangChain 체인을 REST API로 배포하기 위한 라이브러리\n\nLangSmith\n\nLLM 프레임워크에 구축된 체인을 디버그, 테스트, 평가 및 모니터링하고 LangChain과 원활하게 통합할 수 있는 개발자 플랫폼\n\n개발\n\nLangChain/LangChain.js에 애플리케이션을 작성\n\n생산화\n\nLangSmith를 사용하여 체인을 검사, 테스트 및 모니터링\n\n배포\n\nLangServe를 사용하여 모든 체인을 API로 전환\n\n모듈\n\nLLM\n\nLLM 호출을 위한 공통 인터페이스\n\n프롬프트 템플릿\n\n사용자 입력에 따른 프롬프트 생성\n\n체인\n\n여러 LLM과 프롬프트의 입출력을 연결\n\n에이전트\n\n사용자의 요청에 따라 어떤 기능을 어떤 순서로 실행할 것인지 결정\n\n도구\n\n에이전트가 수행하는 특정 기능\n\n메모리\n\n체인 및 에이전트의 메모리 보유\n\n설치\npip install langchain\n\nLLM 예제\n\nLLM 호출을 위한 공통 인터페이스\n\n!pip install langchain\n!pip install openai\n\nimport os\nos.environ[&quot;OPENAI_API_KEY&quot;] = &quot;APIKEY&quot;\n\nfrom langchain.llms import OpenAI\nllm = OpenAI(temperature=0.9)\n\nprint(llm(&quot;컴퓨터 게임을 만드는 새로운 한국어 회사명을 하나 제안해 주세요.&quot;); //비바게임즈\n\n프롬프트 템플릿 예제\n\n프롬프트 템플릿은 사용자 입력으로 프롬프트를 생성하기 위한 템플릿\n\nfrom langchain.prompts import PromptTemplate\nfrom langchain.chains import LLMChain\n\nprompt = PromptTemplate(\n\tinput_variables=[&quot;product&quot;],\n\ttemplate=&quot;{product}을 만드는 새로운 한국어 회사명을 하나 제안해 주세요.&quot;,\n)\n\nprint(prompt.format(product=&quot;가정용 로봇&quot;))\n\n체인 사용법\n\n여러 개의 LLM이나 프롬프트의 입출력을 연결하기 위한 모듈\n\nfrom langchain.chains import LLMChain\nfrom langchain.llm import OepnAI\nfrom langchin.prompts import PromptTemplate\n\nprompt = PromptTemplate(\n\tinput_variables=[&quot;product&quot;],\n\ttemplate=&quot;{product}을 만드는 새로운 한국어 회사명을 하나 제안해 주세요.&quot;,\n)\n\nchain = LLMChain(\n\tllm=OpenAI(temperature=0.9),\n\tprompt=prompt\n)\n\n# 싱글 input, output일때는 run을 쓸수 있다.\nchain.run(&quot;가정용 로봇&quot;)\n\n# 여러 input, output일때는 call을 쓴다.\nchain.call({product:&quot;가정용 로봇&quot;})\n\n에이전트와 도구 사용법\n\n사용자의 요청에 따라 어떤 기능을 어떤 순서로 실행할지 결정하는 모듈\n체인은 미리 정해져 있는 기능을 실행하는 반면, 에이전트는 사용자의 요청에 따라 수해오디는 기능\n예시로 웹 검색과 수치 계산을 진행합니다.\n\nSerpAPI, llm-math\n\n!pip install google-search-results\n\nimport os\nos.environ[&quot;SERPAPI_API_KEY&quot;] = &quot;SERPAPI_KEY&quot;\n\nfrom langchain.agents import load_tools\nfrom langchain.llms import OpenAI\n\ntools = load_tools(\n\ttools_names=[&quot;serpapi&quot;,&quot;llm-math&quot;],\n\tllm-OpenAI(temperature=0)\n)\n\nfrom langchain.agents import initialize_agent\n\nagent = initialize_agent(\n\tagent=&quot;zero-shot-react-description&quot;,\n\tllm=OpenAI(temperature=0),\n\ttools=tools,\n\tverbose=True\n)\n\n# llm이 질문을 판단하여 llm-math를 사용합니다.\nagnet.run(&quot;123*4를 계산기로 계산하세요.&quot;)\n\n# llm이 질문을 판단하여 SerpAPI를 사용합니다.\nagent.run(&quot;오늘 한국 서울 날시를 웹 검색으로 확인하세요.&quot;);\n\n메모리 사용 예제\n\n체인이나 에이턴트의 과거 기억을 보관하는 모듈\n\n이전 대화를 기억하고 그 정보를 현재 대화에 반영\n\nfrom langchain.chains import ConversationChain\nfrom langchain.llms import OpenAI\n\nchain = ConversationChain(\n\tllm=OpenAI(temperature=0),\n\tverbose=True\n)\n\nUse cases\nhttps://python.langchain.com/docs/use_cases\nLangServe\n\n개발자가 LangChain 실행 가능 파일과 체인을 REST API로 배포하는 데 도움\nLangChain 애플리케이션의 원클릭 배포를 위해 LangServe의 호스팅 버전을 출시할 예정\n\n특징\n\n사용자의 LangChain 개체에서 자동으로 추론된 입력 및 출력 스키마는 API 호출마다 강제되며, 풍부한 오류 메시지와 함께 사용됩니다.\nJSONSchema 및 Swagger가 포함된 API 문서 페이지 (예시 링크 삽입)\n단일 서버에서 많은 동시 요청을 지원하는 효율적인 /invoke/, /batch/ 및 /stream/ 엔드포인트\n체인/에이전트에서 모든 (또는 일부) 중간 단계를 스트리밍하는 /stream_log/ 엔드포인트\n0.0.40 버전부터는 astream_events를 지원하여 stream_log의 출력을 구문 분석할 필요 없이 쉽게 스트리밍할 수 있습니다.\n스트리밍 출력과 중간 단계를 제공하는 Playground 페이지 (/playground/)\nLangSmith에 내장된 (옵션) 추적 기능, API 키를 추가하기만 하면 됩니다.\nFastAPI, Pydantic, uvloop 및 asyncio와 같은 검증된 오픈 소스 Python 라이브러리를 사용하여 모두 구축되었습니다.\n클라이언트 SDK를 사용하여 LangServe 서버를 로컬에서 실행 중인 Runnable처럼 호출하거나 HTTP API를 직접 호출할 수 있습니다.\nLangServe Hub\n\n설치\npip install &quot;langserve[all]&quot;\n\n예제\n\nOpenAI 및 Anthropic 채팅 모델을 예약하는 LLM 최소 예입니다. 비동기를 사용하고 일괄 처리 및 스트리밍을 지원합니다.\n\n# Server\n&quot;&quot;&quot;Example LangChain server exposes multiple runnables (LLMs in this case).&quot;&quot;&quot;\n\nfrom fastapi import FastAPI\nfrom langchain.chat_models import ChatAnthropic, ChatOpenAI\n\nfrom langserve import add_routes\n\napp = FastAPI(\ntitle=&quot;LangChain Server&quot;,\nversion=&quot;1.0&quot;,\ndescription=&quot;Spin up a simple api server using Langchain's Runnable interfaces&quot;,\n)\n\nadd_routes(\napp,\nChatOpenAI(),\npath=&quot;/openai&quot;,\n)\nadd_routes(\napp,\nChatAnthropic(),\npath=&quot;/anthropic&quot;,\n)\n\nif __name__ == &quot;__main__&quot;:\nimport uvicorn\n\nuvicorn.run(app, host=&quot;localhost&quot;, port=8000)\n\n# Client\nfrom langchain.prompts.chat import ChatPromptTemplate\nfrom langserve import RemoteRunnable\n\nopenai_llm = RemoteRunnable(&quot;&lt;http://localhost:8000/openai/&gt;&quot;)\nanthropic = RemoteRunnable(&quot;&lt;http://localhost:8000/anthropic/&gt;&quot;)\n\n# We can use either LLM\nprompt = ChatPromptTemplate.from_messages(\n[\n(\n&quot;system&quot;,\n&quot;You are a highly educated person who loves to use big words. &quot;\n+ &quot;You are also concise. Never answer in more than three sentences.&quot;,\n),\n(&quot;human&quot;, &quot;Tell me about your favorite novel&quot;),\n]\n).format_messages()\n\n# AIMessage(content=&quot; My favorite novel is Moby Dick by Herman Melville. The intricate plot and rich symbolism make it a complex and rewarding read. Melville's masterful prose vividly evokes the perilous life of whalers on 19th century ships.&quot;, additional_kwargs={}, example=False)\nanthropic.invoke(prompt)\n\n# My favorite novel is Moby-Dick by Herman Melville. The epic tale of Captain Ahab's quest to find and destroy the great white whale is a masterwork of American literature. Melville's dense, philosophical prose and digressive storytelling style make the novel a uniquely challenging and rewarding read.\nfor chunk in anthropic.stream(prompt):\nprint(chunk.content, end=&quot;&quot;, flush=True)\n\n# My favorite novel is The Art of Language by Maximo Quilana. It is a philosophical treatise on the beauty and complexity of human speech. The prose is elegant yet precise.\nasync for chunk in anthropic.astream(prompt):\nprint(chunk.content, end=&quot;&quot;, flush=True)\n\n# As with regular runnables, async invoke, batch and async batch variants are available by default\nopenai_llm.invoke(prompt)\n# AIMessage(content='My favorite novel is &quot;Ulysses&quot; by James Joyce. It\\\\'s a complex and innovative work that explores the intricacies of human consciousness and the challenges of modernity in a highly poetic and experimental manner. The prose is richly layered and rewards careful reading.', additional_kwargs={}, example=False)\nawait openai_llm.ainvoke(prompt)\n\n#[AIMessage(content=&quot; My favorite novel is Moby Dick by Herman Melville. The epic tale of Captain Ahab's obsessive quest to kill the great white whale is a profound meditation on man's struggle against nature. Melville's poetic language immerses the reader in the mysticism of the high seas.&quot;, additional_kwargs={}, example=False),\n# AIMessage(content=&quot; My favorite novel is Moby Dick by Herman Melville. The intricate details of whaling, though tedious at times, serve to heighten the symbolism and tension leading to the epic battle between Captain Ahab and the elusive white whale. Melville's sublime yet economical prose immerses the reader in a turbulent seascape teeming with meaning.&quot;, additional_kwargs={}, example=False)]\nanthropic.batch([prompt, prompt])\n\n# Streaming is available by default\n\n# [AIMessage(content=' Here is a concise description of my favorite novel in three sentences:\\\\n\\\\nMy favorite novel is Moby Dick by Herman Melville. It is the epic saga of the obsessed Captain Ahab pursuing the white whale that crippled him through the seas. The novel explores deep philosophical questions through rich symbols and metaphors.', additional_kwargs={}, example=False),\n# AIMessage(content=&quot; My favorite novel is Moby Dick by Herman Melville. The epic tale of Captain Ahab's obsessive quest for the great white whale is a masterpiece of American literature. Melville's writing beautifully evokes the mystery and danger of the high seas.&quot;, additional_kwargs={}, example=False)]\nawait anthropic.abatch([prompt, prompt])\n\nfrom langchain.schema.runnable import RunnablePassthrough\ncomedian_chain = (\nChatPromptTemplate.from_messages(\n[\n(\n&quot;system&quot;,\n&quot;You are a comedian that sometimes tells funny jokes and other times you just state facts that are not funny. Please either tell a joke or state fact now but only output one.&quot;,\n),\n]\n)\n| openai_llm\n)\n\njoke_classifier_chain = (\nChatPromptTemplate.from_messages(\n[\n(\n&quot;system&quot;,\n&quot;Please determine if the joke is funny. Say `funny` if it's funny and `not funny` if not funny. Then repeat the first five words of the joke for reference...&quot;,\n),\n(&quot;human&quot;, &quot;{joke}&quot;),\n]\n)\n| anthropic\n)\n\nchain = {&quot;joke&quot;: comedian_chain} | RunnablePassthrough.assign(\nclassification=joke_classifier_chain\n)\n\n# {'joke': AIMessage(content=&quot;Why don't scientists trust atoms?\\\\n\\\\nBecause they make up everything!&quot;, additional_kwargs={}, example=False),\n# 'classification': AIMessage(content=&quot; not funny\\\\nWhy don't scientists trust atoms?&quot;, additional_kwargs={}, example=False)}\nchain.invoke({})\n\nLangSmith\n\n프로덕션급 LLM 애플리케이션을 구축하기 위한 플랫폼\n새로운 체인, 에이전트 또는 도구 세트를 신속하게 디버깅\n미세 조정, 몇 번의 메시지 표시 및 평가를 위한 데이터 세트 생성 및 관리\n자신 있게 개발하려면 애플리케이션에서 회귀 테스트를 실행하세요.\n제품 통찰력과 지속적인 개선을 위한 생산 분석 캡처\n\nLangSmith와 Lilac으로 LLM을 fine-tuning\nhttps://blog.langchain.dev/fine-tune-your-llms-with-langsmith-and-lilac/\nOpenAI Fine-Tuning\nfrom langsmith import Client\n\nclient = Client()\n\nimport datetime\n\nproject_name = &quot;default&quot;\nrun_type = &quot;llm&quot;\nend_time = datetime.datetime.now()\n\nruns = client.list_runs(\nproject_name=project_name,\nrun_type=run_type,\nerror=False,\n)\n\nfrom langchain import chains, chat_models, prompts, schema, callbacks\n\nchain = prompts.ChatPromptTemplate.from_template(&quot;Tell a joke for:\\\\n{input}&quot;) | chat_models.ChatAnthropic(tags=['my-anthropic-run']) | schema.output_parser.StrOutputParser()\n\nwith callbacks.collect_runs() as cb:\nchain.invoke({&quot;input&quot;: &quot;foo&quot;})\n# Assume feedback is logged\nrun = cb.traced_runs[0]\nclient.create_feedback(run.id, key=&quot;user_click&quot;, score=1)\n\nproject_name = &quot;default&quot;\nend_time = datetime.datetime.now()\n\nruns = client.list_runs(\nproject_name=project_name,\nexecution_order=1,\nfilter='and(eq(feedback_key, &quot;user_click&quot;), eq(feedback_score, 1))',\n# For continuous scores, you can filter for &gt;, &lt;, &gt;=, &lt;= with the followingg arguments: gt/lt/gte/lte(feedback_score, 0.9)\n# filter='and(eq(feedback_key, &quot;user_click&quot;), gt(feedback_score, 0.9))',\nerror=False,\n)\n\nllm_runs = []\nfor run in runs:\nllm_run = next(client.list_runs(project_name=project_name, run_type=&quot;llm&quot;, parent_run_id=run.id))\nllm_runs.append(llm_run)\n\nllm_runs[0].tags\n\n# For any &quot;Chain&quot; object, you can add tags directly on the Example with LLMChain\nimport uuid\n\nunique_tag = f&quot;call:{uuid.uuid4()}&quot;\n\nchain = chains.LLMChain(\nllm=chat_models.ChatAnthropic(tags=['my-cool-llm-tag']), # This tag will only be applied to the LLM\nprompt=prompts.ChatPromptTemplate.from_template(&quot;Tell a joke based on the following prompt:\\\\n\\\\nPrompt:{input}&quot;),\ntags=[&quot;my-tag&quot;]\n)\n\n# You can also define at call time for the call/invoke/batch methods.\n# This tag will be propagated to all child calls\nprint(chain({&quot;input&quot;: &quot;podcasting these days&quot;}, tags=[unique_tag]))\n\n# If you're defining using Runnables (aka langchain expression language)\nrunnable = (\nprompts.ChatPromptTemplate.from_template(&quot;Tell a joke based on the following prompt:\\\\n\\\\nPrompt:{input}&quot;)\n| chat_models.ChatAnthropic(tags=['my-cool-llm-tag']) # This tag will only be applied to the LLM\n| schema.StrOutputParser(tags=['some-parser-tag'])\n)\n\n# Again, you can tag at call time as well. This tag will be propagated to all child calls\nprint(runnable.invoke({&quot;input&quot;: &quot;podcasting these days&quot;}, {&quot;tags&quot;: [unique_tag]}))\n\nproject_name = &quot;default&quot;\nend_time = datetime.datetime.now()\n\nruns = client.list_runs(\nexecution_order=1, # Only return the root trace\nfilter=f'has(tags, &quot;{unique_tag}&quot;)',\n)\nlen(list(runs))\n\nproject_name = &quot;default&quot;\nrun_type = &quot;llm&quot;\nend_time = datetime.datetime.now()\n\nruns = client.list_runs(\nproject_name=project_name,\nrun_type=run_type,\nfilter='eq(name, &quot;ChatAnthropic&quot;)',\nerror=False,\n)\n\n# Example chain for the following query\nfrom langchain import prompts, chat_models\n\nchain = (\nprompts.ChatPromptTemplate.from_template(\n&quot;Summarize the following chat log: {input}&quot;\n)\n| chat_models.ChatOpenAI()\n)\n\nchain.invoke({&quot;input&quot;: &quot;hi there, hello....&quot;})\n\nimport datetime\n\nproject_name = &quot;default&quot;\nrun_type = &quot;prompt&quot;\nend_time = datetime.datetime.now()\n\nruns = client.list_runs(\nproject_name=project_name,\nrun_type=run_type,\nend_time=end_time,\nerror=False,\n)\n\n# You can then get a sibling LLM run by searching by parent_run_id and including other criteria\nfor prompt_run in runs:\nllm_run = next(client.list_runs(project_name=project_name, run_type=&quot;llm&quot;, parent_run_id=prompt_run.parent_run_id))\ninputs, outputs = prompt_run.inputs, llm_run.outputs\n\ndataset = client.create_dataset(\ndataset_name = &quot;Fine-Tuning Dataset Example&quot;,\ndescription=f&quot;Chat logs taken from project {project_name} for fine-tuning&quot;,\ndata_type=&quot;chat&quot;,\n)\nfor run in runs:\nif 'messages' not in run.inputs or not run.outputs:\n# Filter out non chat runs\ncontinue\ntry:\n# Convenience method for creating a chat example\nclient.create_example_from_run(\ndataset_id=dataset.id,\nrun=run,\n)\n# Or if you want to select certain keys/values in inputs\n# inputs = convert_inputs(run.inputs)\n# outputs = convert_outputs(run.outputs)\n# client.create_example(\n# dataset_id=dataset.id,\n# inputs=inputs,\n# outputs=outputs,\n# run=run,\n# )\nexcept:\n# Duplicate inputs raise an exception\npass\n\nfrom langsmith import schemas\nfrom langchain import load\n\ndef convert_messages(example: schemas.Example) -&gt; dict:\nmessages = load.load(example.inputs)['messages']\nmessage_chunk = load.load(example.outputs)['generations'][0]['message']\nreturn {&quot;messages&quot;: messages + [message_chunk]}\n\nmessages = [\nconvert_messages(example)\nfor example in client.list_examples(dataset_name=&quot;Fine-Tuning Dataset Example&quot;)\n]\n\nfrom langchain.adapters import openai as openai_adapter\n\nfinetuning_messages = openai_adapter.convert_messages_for_finetuning(messages)\n\nimport time\nimport json\nimport io\n\nimport openai\n\nmy_file = io.BytesIO()\nfor group in finetuning_messages:\nif any([&quot;function_call&quot; in message for message in group]):\ncontinue\nmy_file.write((json.dumps({&quot;messages&quot;: group}) + &quot;\\\\n&quot;).encode('utf-8'))\n\nmy_file.seek(0)\ntraining_file = openai.File.create(\nfile=my_file,\npurpose='fine-tune'\n)\n\n# Wait while the file is processed\nstatus = openai.File.retrieve(training_file.id).status\nstart_time = time.time()\nwhile status != &quot;processed&quot;:\nprint(f&quot;Status=[{status}]... {time.time() - start_time:.2f}s&quot;, end=&quot;\\\\r&quot;, flush=True)\ntime.sleep(5)\nstatus = openai.File.retrieve(training_file.id).status\nprint(f&quot;File {training_file.id} ready after {time.time() - start_time:.2f} seconds.&quot;)\n\njob = openai.FineTuningJob.create(\ntraining_file=training_file.id,\nmodel=&quot;gpt-3.5-turbo&quot;,\n)\n\n# It may take 10-20+ minutes to complete training.\nstatus = openai.FineTuningJob.retrieve(job.id).status\nstart_time = time.time()\nwhile status != &quot;succeeded&quot;:\nprint(f&quot;Status=[{status}]... {time.time() - start_time:.2f}s&quot;, end=&quot;\\\\r&quot;, flush=True)\ntime.sleep(5)\njob = openai.FineTuningJob.retrieve(job.id)\nstatus = job.status\n\nfrom langchain import chat_models, prompts\n\nmodel_name = job.fine_tuned_model\n# Example: ft:gpt-3.5-turbo-0613:personal::5mty86jblapsed\nmodel = chat_models.ChatOpenAI(model=model_name)\nchain.invoke({&quot;input&quot;: &quot;Who are you designed to assist?&quot;})\n\nLangGraph\n\n구축된(그리고 함께 사용하도록 의도된) LLM을 사용하여 상태 저장 다중 행위자 애플리케이션을 구축하기 위한 라이브러리\n주요 용도는 LLM 어플리케이션에 사이클을 추가하는 것입니다.\n\n#langchain #랭체인 #chatgpt",
 		"tags": ["langchain", "랭체인", "chatgpt", "note"]
@@ -25,15 +25,7 @@
 
 {
 		"title": "asynchronous (비동기)",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
-		"url":"/Blogging/study/cs/asynchronous (비동기)/",
-		"content": "요청과 그 결과가 분리되어 처리되는 것\n요청을 보낸 후 다른 작업을 수행하다가 결과가 돌아오면 처리하는 것\n대규모 데이터 처리나 네트워크 통신 들에서 유용하게 사용",
-		"tags": [ "note"]
-},
-
-{
-		"title": "asynchronous (비동기)",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/cs/asynchronous/",
 		"content": "요청과 그 결과가 분리되어 처리되는 것\n요청을 보낸 후 다른 작업을 수행하다가 결과가 돌아오면 처리하는 것\n대규모 데이터 처리나 네트워크 통신 들에서 유용하게 사용",
 		"tags": [ "note"]
@@ -41,31 +33,55 @@
 
 {
 		"title": "process (프로세스)",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/cs/process (프로세스)/",
 		"content": "실행 중인 프로그램의 인스턴스\n자체 메모리 공간(코드, 데이터, 힙, 스택)을 가지며, 운영체제의 관리 하에 독립적으로 실행",
 		"tags": [ "note"]
 },
 
 {
+		"title": "process (프로세스)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
+		"url":"/Blogging/study/cs/process/",
+		"content": "실행 중인 프로그램의 인스턴스\n자체 메모리 공간(코드, 데이터, 힙, 스택)을 가지며, 운영체제의 관리 하에 독립적으로 실행",
+		"tags": [ "note"]
+},
+
+{
 		"title": "synchronous (동기)",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/cs/synchronous (동기)/",
 		"content": "요청과 그 결과가 한번에 처리되는 것\n요청을 보낸 후 결과가 돌아올 때까지 대기하는 것",
 		"tags": [ "note"]
 },
 
 {
+		"title": "synchronous (동기)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
+		"url":"/Blogging/study/cs/synchronous/",
+		"content": "요청과 그 결과가 한번에 처리되는 것\n요청을 보낸 후 결과가 돌아올 때까지 대기하는 것",
+		"tags": [ "note"]
+},
+
+{
 		"title": "thread (스레드)",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/cs/thread (스레드)/",
 		"content": "",
 		"tags": [ "note"]
 },
 
 {
+		"title": "thread (스레드)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
+		"url":"/Blogging/study/cs/thread/",
+		"content": "",
+		"tags": [ "note"]
+},
+
+{
 		"title": "Javascript에 대해서",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/language/Javascript에 대해서/",
 		"content": "",
 		"tags": [ "note"]
@@ -73,7 +89,7 @@
 
 {
 		"title": "Cache",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/Cache/",
 		"content": "",
 		"tags": [ "note"]
@@ -81,7 +97,7 @@
 
 {
 		"title": "DNS",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/DNS/",
 		"content": "",
 		"tags": [ "note"]
@@ -89,7 +105,7 @@
 
 {
 		"title": "Domain",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/Domain/",
 		"content": "",
 		"tags": [ "note"]
@@ -97,7 +113,7 @@
 
 {
 		"title": "HSTS",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/HSTS/",
 		"content": "HSTS는 HTTP Strict Transport Security로 Web Site에 접속할 때, 강제적으로 HTTPS Protocol로만 접속하게 하는 기능입니다.",
 		"tags": [ "note"]
@@ -105,7 +121,7 @@
 
 {
 		"title": "HTTP",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/HTTP/",
 		"content": "",
 		"tags": [ "note"]
@@ -113,7 +129,7 @@
 
 {
 		"title": "HTTPS",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/HTTPS/",
 		"content": "",
 		"tags": [ "note"]
@@ -121,7 +137,7 @@
 
 {
 		"title": "IP",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/IP/",
 		"content": "",
 		"tags": [ "note"]
@@ -129,7 +145,7 @@
 
 {
 		"title": "ISP",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/ISP/",
 		"content": "",
 		"tags": [ "note"]
@@ -137,7 +153,7 @@
 
 {
 		"title": "Router",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/Router/",
 		"content": "",
 		"tags": [ "note"]
@@ -145,7 +161,7 @@
 
 {
 		"title": "TCP",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/TCP/",
 		"content": "",
 		"tags": [ "note"]
@@ -153,7 +169,7 @@
 
 {
 		"title": "URL",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/URL/",
 		"content": "",
 		"tags": [ "note"]
@@ -161,7 +177,7 @@
 
 {
 		"title": "브라우저에 URL를 넣었을 때 어찌 되는가?",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/What is done when you enter a URL in your browser/",
 		"content": "다음과 같은 순서로 진행 됩니다.\n\n브라우저에 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a> 주소를 넣습니다.\n브라우저에서 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a>를 해석합니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a> 문법이 맞지 않다면 기본 검색 엔진으로 검색\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a> 문법이 맞다면, <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a>의 호스트 부분을 인코딩합니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/HSTS/\">HSTS</a> 확인하고 있으면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/HTTPS/\">HTTPS</a>로 요청합니다.\n없으면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/HTTP/\">HTTP</a>로 요청합니다.\n\n브라우저는 캐싱 된 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/DNS/\">DNS</a> 기록들에서 해당 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a>에 대응되는 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/IP/\">IP</a> 주소가 있는지 확인합니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/DNS/\">DNS</a>의 목적은 편의성 제공이며, 캐싱은 네트워크 트래픽을 조절하고 데이터 전송 시간을 줄입니다.\nDNS query로 먼저 브라우저 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>를 확인합니다.\n없다면 OS <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>를 확인합니다.\n없다면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Router/\">Router</a> <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>를 확인합니다.\n없다면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/ISP/\">ISP</a> <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>를 확인합니다.\n\n요청한 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/URL/\">URL</a>이 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Cache/\">Cache</a>에 없다면 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/ISP/\">ISP</a>의 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/DNS/\">DNS</a>서버가 해당 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/Domain/\">Domain</a> 호스팅하고 있는 서버의 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/IP/\">IP</a> 주소를 찾기 위해 DNS query를 ??에 보냅니다.\n브라우저가 서버와 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/TCP/\">TCP</a> 커넥션을 합니다.\n브라우저가 웹 서버에 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/HTTP/\">HTTP</a> 요청을 합니다.\n서버가 요청을 처리하고 <a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/response/\">response</a>를 생성합니다.\n서버가 HTTP response를 보냅니다.\n브라우저가 받은 response의 body부분으로 content를 보여줍니다.\n\nDOM tree 생성을 합니다.\nCSSOM tree를 생성합니다.\n렌더링 tree 생성합니다.\nJavascript 파싱과 실행을 합니다.\n레이아웃을 그립니다.\n페이팅을 합니다.\n\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/reflow/\">reflow</a>\n<a class=\"internal-link\" target=\"\" data-note-icon=\"\" href=\"/Blogging/study/web/repaint/\">repaint</a>\n\n#web #browser #interview #frontend",
 		"tags": ["web", "browser", "interview", "frontend", "note"]
@@ -169,7 +185,7 @@
 
 {
 		"title": "reflow",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/reflow/",
 		"content": "",
 		"tags": [ "note"]
@@ -177,7 +193,7 @@
 
 {
 		"title": "repaint",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/repaint/",
 		"content": "",
 		"tags": [ "note"]
@@ -185,7 +201,7 @@
 
 {
 		"title": "request",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/request/",
 		"content": "",
 		"tags": [ "note"]
@@ -193,7 +209,7 @@
 
 {
 		"title": "response",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/Blogging/study/web/response/",
 		"content": "",
 		"tags": [ "note"]
@@ -201,7 +217,7 @@
 
 {
 		"title": "Welcome",
-		"date":"Tue Feb 06 2024 11:57:18 GMT+0000 (Coordinated Universal Time)",
+		"date":"Tue Feb 06 2024 11:57:21 GMT+0000 (Coordinated Universal Time)",
 		"url":"/",
 		"content": "이곳은 공부를 한 것에 대해서 정리하거나 생각을 정리하는 곳입니다.\n아직은 빈 페이지가 많지만 열심히 채울 예정입니다.",
 		"tags": [ "note","gardenEntry"]
