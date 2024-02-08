@@ -757,7 +757,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2024-02-08T11:33:42.445Z';
+        const searchIndexDate = '2024-02-08T11:33:52.991Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -769,9 +769,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2024-02-08T11:33:42.445Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2024-02-08T11:33:52.991Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-02-08T11:33:42.445Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-02-08T11:33:52.991Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -1018,7 +1018,18 @@
       </header>
       
       
-      <p><img src="/img/user/assets/images/79e1fdf54f85d274fd36ec2707815c3f.gif" alt="79e1fdf54f85d274fd36ec2707815c3f.gif"></p>
+      <p><picture src="/img/user/assets/images/79e1fdf54f85d274fd36ec2707815c3f.gif" alt="79e1fdf54f85d274fd36ec2707815c3f.gif"><source       media="(max-width:480px)"
+      srcset="/img/optimized/AoBdJl7WzP-384.webp"
+      type="image/webp"
+      >
+      <source       media="(max-width:480px)"
+      srcset="/img/optimized/AoBdJl7WzP-384.jpeg"
+      >
+      <img       class=""
+      src="/img/user/assets/images/79e1fdf54f85d274fd36ec2707815c3f.gif"
+      alt="79e1fdf54f85d274fd36ec2707815c3f.gif"
+      width=""
+      ></picture></p>
 <h1 id="새해 복 많이 받으세요." tabindex="-1">새해 복 많이 받으세요.</h1>
 
       
