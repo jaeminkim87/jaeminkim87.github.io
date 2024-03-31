@@ -789,7 +789,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2024-03-31T13:47:00.502Z';
+        const searchIndexDate = '2024-03-31T13:47:01.624Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -801,9 +801,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2024-03-31T13:47:00.502Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2024-03-31T13:47:01.624Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-03-31T13:47:00.502Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-03-31T13:47:01.624Z', docs}));
             window.docs = docs
             window.index = index;
         }
@@ -2219,7 +2219,23 @@ plt.axis(&quot;off&quot;)
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.show()
 </code></pre>
-<p><img src="/img/user/assets/images/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%A7%88%EC%9D%B4%EB%8B%9D%20%EC%99%84%EB%B2%BD%20%EA%B0%80%EC%9D%B4%EB%93%9C/1%EC%9E%A5/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202024-03-24%20%EC%98%A4%ED%9B%84%203.51.53.png" alt="스크린샷 2024-03-24 오후 3.51.53.png"></p>
+<p><picture src="/img/user/assets/images/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%A7%88%EC%9D%B4%EB%8B%9D%20%EC%99%84%EB%B2%BD%20%EA%B0%80%EC%9D%B4%EB%93%9C/1%EC%9E%A5/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202024-03-24%20%EC%98%A4%ED%9B%84%203.51.53.png" alt="스크린샷 2024-03-24 오후 3.51.53.png"><source       media="(max-width:480px)"
+      srcset="/img/optimized/NNDEBZdNk1-500.webp"
+      type="image/webp"
+      >
+      <source       media="(max-width:480px)"
+      srcset="/img/optimized/NNDEBZdNk1-500.jpeg"
+      >
+      <source         media="(max-width:1920px)"
+        srcset="/img/optimized/NNDEBZdNk1-700.webp"
+        type="image/webp"
+        ><source         media="(max-width:1920px)"
+        srcset="/img/optimized/NNDEBZdNk1-700.jpeg"
+        ><img       class=""
+      src="/img/user/assets/images/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%A7%88%EC%9D%B4%EB%8B%9D%20%EC%99%84%EB%B2%BD%20%EA%B0%80%EC%9D%B4%EB%93%9C/1%EC%9E%A5/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202024-03-24%20%EC%98%A4%ED%9B%84%203.51.53.png"
+      alt="스크린샷 2024-03-24 오후 3.51.53.png"
+      width=""
+      ></picture></p>
 <ul>
 <li>관심 없는 단어가 보이기에 좀 더 개선해 보자.</li>
 </ul>
