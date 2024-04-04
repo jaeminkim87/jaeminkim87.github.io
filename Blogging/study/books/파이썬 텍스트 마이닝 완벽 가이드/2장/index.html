@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Welcome</title>
+    <title>2장 텍스트 전처리</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://fastly.jsdelivr.net/npm/mermaid@9.4.0/dist/mermaid.min.js"></script>
 <script>
@@ -81,6 +81,7 @@
   </head>
   <body class="theme-dark markdown-preview-view markdown-rendered markdown-preview-section ">
     
+
     
       
     
@@ -295,7 +296,7 @@
     
         <div x-show="isOpen" style="display:none" class="filelist">
             
-                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/Blogging/study/books/파이썬 텍스트 마이닝 완벽 가이드/2장/">2장 텍스트 전처리 </a>
+                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/Blogging/study/books/파이썬 텍스트 마이닝 완벽 가이드/2장/">2장 텍스트 전처리 </a>
                 </div>
             
         </div>
@@ -626,7 +627,7 @@
     
         <div x-show="isOpen" style="display:none" class="">
             
-                <div @click.stop class="notelink active-note"><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Welcome </a>
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/">Welcome </a>
                 </div>
             
         </div>
@@ -636,6 +637,7 @@
     </div>
 
     
+
     
       <div class="search-container" id="globalsearch" onclick="toggleSearch()">
     <div class="search-box">
@@ -1040,40 +1042,557 @@
     }
 </script>
     
+
     <main class="content cm-s-obsidian ">
       <header>
-      
-        <h1></h1>
-      
-
-      <div class="header-meta">
         
-          <div class="header-tags">
-            
-              
-            
-              
-            
-          </div>
+          <h1 data-note-icon="">2장 텍스트 전처리</h1>
         
-      </div>
+        <div class="header-meta">
+          
+            <div class="header-tags">
+              
+                
+              
+            </div>
+          <div class="timestamps"><div><i icon-name="calendar-plus"></i> <span class="human-date" data-date="2024-04-04T19:45:52.353+09:00"></span></div><div><i icon-name="calendar-clock"></i> <span class="human-date" data-date="2024-04-04T19:47:43.245+09:00"></span></div></div></div>
       
       
       </header>
       
       
-      <p>이곳은 공부를 한 것에 대해서 정리하거나 생각을 정리하는 곳입니다.</p>
-<p>아직은 빈 페이지가 많지만 열심히 채울 예정입니다.</p>
+      <h2 id="2-1" tabindex="-1">2.1. 텍스트 전처리 방식</h2>
+<ul>
+<li>여기서는 대부분의 자연어 처리에서 공통적으로 수행되는 전처리에 대해서 설명한다.</li>
+<li>주어진 텍스트에서 노이즈와 같이 불필요한 부분을 제거하고, 문장을 표준 단어들로 분리한 후에 각 단어의 품사를 파악하는 것</li>
+<li>왜 필요한가?
+<ul>
+<li>우리는 일반적으로 하나의 문장을 이해할 때는 사용된 단어들의 순차수열로 이해
+<ul>
+<li>각각의 단어를 이해하고 그 단어들의 순서에 따라 의미를 이해</li>
+</ul>
+</li>
+<li>컴퓨터에게 이해 시키려면 문장을 단어 단위로 나눈 후에 이 단어들의 리스트 형태로 변환 해주어야 한다.
+<ul>
+<li>이때 쓸모없다고 생각되는 문자를 없엔다.</li>
+</ul>
+</li>
+<li>예시 (별 헤는 밤)
+<ul>
+<li>계절이 지나가는 하늘에는 가을로 가득 차 있습니다.</li>
+<li>[’계절이’, ‘지나가는’, ‘하늘에는’, ‘가을로’, ‘가득’, ‘차’, ‘있습니다’]</li>
+<li>마지막 ‘있습니다’는 ‘있다’에서 파생 단어여서 ‘있다’로 변환해서 쓸때 효율적일수 있다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>전처리 단계
+<ul>
+<li>정제 : 분석에 불필요한 노이즈를 제러
+<ul>
+<li>사전에 있는 유의미한 단어라 하더라도 분석에 별 도움이 안되는 단어를 제거 (불용어 제거 라고 한다.)
+<ul>
+<li>불용어 리스트 : <a href="https://www.ranks.nl/stopwords/korean" target="_blank" class="external-link">https://www.ranks.nl/stopwords/korean</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>토큰화
+<ul>
+<li>주어진 텍스트를 원하는 단위(토큰)로 나누는 작업</li>
+</ul>
+</li>
+<li>정규화
+<ul>
+<li>같은 의미를 가진 동일한 단어임에도 불구하고 다른 형태로 쓰여진 단어들을 통일시켜서 표준 단어로 만드는 작업
+<ul>
+<li>예시 goes는 3인칭에 쓰이는 동사이지만 go와 동일하게 판단하고 go로 변환 시킨다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>품사태깅
+<ul>
+<li>문법적인 기능에 따라 분류하는 것</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-2" tabindex="-1">2.2. 토큰화</h2>
+<ul>
+<li>NLTK는 교육용으로 개발된 자연어 처리 및 문서 분셕용 파이썬 패키지</li>
+<li>자연어 처리를 지원하는 다양한 라이브러리와 말뭉치, 예제를 제공</li>
+</ul>
+<pre><code class="language-python"># 필요한 nltk 라이브러리를 다운로드
+import nltk
+nltk.download('punkt')
+nltk.download('webtext')
+nltk.download('wordnet')
+nltk.download('stopwords')
+nltk.download('averaged_perceptron_tagger')
+</code></pre>
+<ul>
+<li>
+<p>문장 토큰화</p>
+<ul>
+<li>먼저 문장 토큰화를 해보자.</li>
+<li>nltk의 sent_tokenize를 사용한다.</li>
+<li>각 문장을 문자열로 갖는 리스트를 출력한다.</li>
+</ul>
+<pre><code class="language-python">para = &quot;Hello everyone. It's good to see you. Let's start our text mining class!&quot;
+
+from nltk.tokenize import sent_tokenize
+
+# 주어진 텍스트를 문장 단위로 토큰화. 주로 . ! ? 등을 이용 
+print(sent_tokenize(para))
+
+# ['Hello everyone.', &quot;It's good to see you.&quot;, &quot;Let's start our text mining class!&quot;]
+
+</code></pre>
+<ul>
+<li>만약에 다른 언어에 대해 문장 토큰화를 하려면 아래와 같이 사전 학습된 모델을 지정후 실행해야한다.</li>
+<li>안타깝게도 nltk에는 한글에 대해 사전학습된 모델이 없다. 다만 문장은 마침표나 ?, !같은 것을 기준으로 학습되어 있어서 영어 모델로도 어느정도 가능하다.</li>
+</ul>
+<pre><code class="language-python">para_kor = &quot;안녕하세요, 여러분. 만나서 반갑습니다. 이제 텍스트마이닝 클래스를 시작해봅시다!&quot;
+
+print(sent_tokenize(para_kor))
+# ['안녕하세요, 여러분.', '만나서 반갑습니다.', '이제 텍스트마이닝 클래스를 시작해봅시다!']
+</code></pre>
+</li>
+<li>
+<p>단어 토큰화</p>
+<ul>
+<li>NLTK에서는 word_tokenize로 단어 토큰화를 할 수 있다.</li>
+</ul>
+<pre><code class="language-python">from nltk.tokenize import word_tokenize
+
+# 주어진 text를 word 단위로 tokenize함
+print(word_tokenize(para))
+
+# ['Hello', 'everyone', '.', 'It', &quot;'s&quot;, 'good', 'to', 'see', 'you', '.', 'Let', &quot;'s&quot;, 'start', 'our', 'text', 'mining', 'class', '!']
+</code></pre>
+<ul>
+<li>아래는 WordPunctTokenizer를 사용한 방법이다.</li>
+</ul>
+<pre><code class="language-python">from nltk.tokenize import WordPunctTokenizer
+
+print(WordPunctTokenizer().tokenize(para))
+# ['Hello', 'everyone', '.', 'It', &quot;'&quot;, 's', 'good', 'to', 'see', 'you', '.', 'Let', &quot;'&quot;, 's', 'start', 'our', 'text', 'mining', 'class', '!']
+</code></pre>
+<ul>
+<li>위 2개 차이점은 It 다음에 ‘s로 할 것이냐 ‘ , s로 나눌것이냐 차이이고 목적에 따라서 토크나이저를 잘 나눠 써야 한다.</li>
+<li>한글은 NLTK에서 단어로는 잘 안되며, 대신에 KoNLPy를 이용해서 한글 전처리를 한다.</li>
+</ul>
+</li>
+<li>
+<p>정규표현식을 이용한 토큰화</p>
+<ul>
+<li>라이브러리는 편하지만 세밀하기 토큰화하기 어렵기에 정규표현식을 이용해서 다양한 조건에 따라 토큰화 할수 있다.</li>
+<li>정규식을 익혀야 하는 문제가 있지만 요즘 chatGPT가 잘 만들어주니 잘 가져다 쓰자</li>
+<li>여기서는 정규식 예제라서 설명은 건너뛴다.</li>
+</ul>
+</li>
+<li>
+<p>노이즈와 불용어 제거</p>
+<ul>
+<li>특수문자와 같은 불필요한 문자들 혹은 노이즈가 삭제를 시킨다. (요즘 특수문자도 해석을 위해 삭제 안하는 경우도 있긴 하다.)</li>
+<li>토큰화 과정과 별도로 정규표현식을 이용한 치환을 통해 원하는 패턴의 노이즈를 제거할 수 있다.</li>
+<li>불용어는 리스트를 보고 지우는 경우가 있다.</li>
+</ul>
+<pre><code class="language-python">from nltk.corpus import stopwords 
+# 일반적으로 분석대상이 아닌 단어들
+english_stops = set(stopwords.words('english')) 
+# 반복이 되지 않도록 set으로 변환
+text1 = &quot;Sorry, I couldn't go to movie yesterday.&quot;
+tokenizer = RegexpTokenizer(&quot;[\\\\w']+&quot;)
+tokens = tokenizer.tokenize(text1.lower()) 
+# word_tokenize로 토큰화
+# stopwords를 제외한 단어들만으로 list를 생성
+result = [word for word in tokens if word not in english_stops]
+print(result)
+# ['sorry', 'go', 'movie', 'yesterday']
+
+# can't를 추가하려면?
+tokenizer = RegexpTokenizer(&quot;[\\\\w]+&quot;) 
+print(tokenizer.tokenize(&quot;Sorry, I can't go there.&quot;))
+#  ['Sorry', 'I', 'can', 't', 'go', 'there']
+
+# 모두 소문자로 바꾸고 '를 포함해 세글자 이상의 단어들만 골라내려면?
+text1 = &quot;Sorry, I can't go there.&quot;
+tokenizer = RegexpTokenizer(&quot;[\\w']{3,}&quot;)
+print(tokenizer.tokenize(text1.lower()))
+# ['sorry', &quot;can't&quot;, 'there']
+</code></pre>
+</li>
+<li>
+<p>노이즈와 불용어 제거</p>
+<ul>
+<li>앞에서 정규표현식을 이용한 토큰화 과정을 보면 특수문자와 같은 불필요한 문자들 혹은 노이즈를 삭제한다.</li>
+<li>영어 같은 경우 보통 길이가 3미만인 단어들은 삭제를 한다.</li>
+<li>또는 stopworkd라는 라이브러리를 사용해서 불용어 사전을 참조해 삭제한다. (직접 만들수도 있고 가져와서 쓰기도 한다.)</li>
+</ul>
+<pre><code class="language-python">from nltk.corpus import stopwords
+# 일반적으로 분석대상이 아닌 단어들
+english_stops = set(stopwords.words('english'))
+# 반복이 되지 않도록 set으로 변환
+text1 = &quot;Sorry, I couldn't go to movie yesterday.&quot;
+tokenizer = RegexpTokenizer(&quot;[\\\\w']+&quot;)
+tokens = tokenizer.tokenize(text1.lower())
+# word_tokenize로 토큰화
+# stopwords를 제외한 단어들만으로 list를 생성
+result = [word for word in tokens if word not in english_stops]
+print(result)
+# ['sorry', 'go', 'movie', 'yesterday']
+</code></pre>
+<ul>
+<li>불용어 사전에 무엇이 있는지 알고 싶으면 아래와 같이 볼수 있다.</li>
+</ul>
+<pre><code class="language-python">print(english_stops)
+# {'his', 'any', 'was', 'it', 'being', &quot;wasn't&quot;, 'its', 'down', 'has', 'again', 'itself', 'weren', 'did', &quot;you'll&quot;, 'into', 'than', 'wouldn', 'these', 'he', 'o', 'so', &quot;needn't&quot;, 'my', 'y', 'some', 'below', 'how', 'ourselves', 'hadn', 'too', 'which', 'all', 'me', &quot;mustn't&quot;, 'the', 'out', 'your', 'on', 'don', 'her', 'does', &quot;aren't&quot;, 'himself', 'from', 'further', 'here', 'mightn', &quot;it's&quot;, &quot;shouldn't&quot;, 'you', 'herself', 'ma', &quot;you're&quot;, 'have', 'because', 'myself', &quot;hasn't&quot;, 'there', 'him', 'against', 'them', 'can', 'as', 'those', 'isn', 'won', 'are', 'who', 'by', 've', 're', 'or', 'themselves', 'm', 'had', 'once', &quot;she's&quot;, 'couldn', 'she', 'am', 'during', 'off', 'that', 'our', 'under', 'needn', 'i', 'then', &quot;wouldn't&quot;, 'do', 'very', 'each', 'just', 'they', 'wasn', 'through', &quot;that'll&quot;, 'ain', 'whom', &quot;weren't&quot;, 'yourselves', 'didn', 'between', &quot;shan't&quot;, &quot;hadn't&quot;, 'before', 'but', &quot;doesn't&quot;, &quot;won't&quot;, 'shouldn', 's', 'been', 'if', 'hers', 'most', 'when', 'should', 'mustn', &quot;you'd&quot;, 'not', 'this', 'theirs', 'own', 'until', 'will', 'what', 'more', 'hasn', 'doesn', 'a', 'now', 'an', 'where', 'for', 'their', 'yours', 't', 'same', &quot;couldn't&quot;, 'above', &quot;isn't&quot;, 'll', 'nor', 'were', &quot;didn't&quot;, 'after', 'and', &quot;don't&quot;, 'other', &quot;mightn't&quot;, 'about', &quot;should've&quot;, 'of', 'while', 'aren', 'doing', 'few', 'in', 'both', 'with', 'over', 'haven', 'to', &quot;haven't&quot;, 'such', 'up', 'is', 'why', 'no', 'only', 'at', 'having', 'shan', 'be', 'ours', &quot;you've&quot;, 'yourself', 'we', 'd'}
+</code></pre>
+</li>
+</ul>
+<h2 id="2-3" tabindex="-1">2.3. 정규화</h2>
+<ul>
+<li>
+<p>이전에 얘기했다시피 goes와 같은 3인칭 동사이지만 go와 같은 취급을 위해 변환을 하는 작업</p>
+</li>
+<li>
+<p>어간 추출</p>
+<ul>
+<li>
+<p>어형이 변형된 단어로부터 접사등을 제거하고 그 단어의 어간을 분리해 내는 작업</p>
+</li>
+<li>
+<p>어형 : 단어의 형태를 의미</p>
+</li>
+<li>
+<p>어간 : 어형변화에서 변화하지 않는 부분 or 용언의 바뀌지 않는 부분</p>
+</li>
+<li>
+<p>용언 : 문장 안에서 서술하는 구실을 하는 동사와 형용사</p>
+</li>
+<li>
+<p>예시</p>
+<p><picture src="/img/user/assets/images/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%A7%88%EC%9D%B4%EB%8B%9D%20%EC%99%84%EB%B2%BD%20%EA%B0%80%EC%9D%B4%EB%93%9C/1%EC%9E%A5/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202024-03-24%20%EC%98%A4%ED%9B%84%202.36.48.png" alt="스크린샷 2024-03-24 오후 2.36.48.png"><source       media="(max-width:480px)"
+      srcset="/img/optimized/X6uU839Xlk-500.webp"
+      type="image/webp"
+      >
+      <source       media="(max-width:480px)"
+      srcset="/img/optimized/X6uU839Xlk-500.jpeg"
+      >
+      <source         media="(max-width:1920px)"
+        srcset="/img/optimized/X6uU839Xlk-700.webp"
+        type="image/webp"
+        ><source         media="(max-width:1920px)"
+        srcset="/img/optimized/X6uU839Xlk-700.jpeg"
+        ><img       class=""
+      src="/img/user/assets/images/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%ED%85%8D%EC%8A%A4%ED%8A%B8%20%EB%A7%88%EC%9D%B4%EB%8B%9D%20%EC%99%84%EB%B2%BD%20%EA%B0%80%EC%9D%B4%EB%93%9C/1%EC%9E%A5/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7%202024-03-24%20%EC%98%A4%ED%9B%84%202.36.48.png"
+      alt="스크린샷 2024-03-24 오후 2.36.48.png"
+      width=""
+      ></picture></p>
+</li>
+<li>
+<p>영어와 우리말은 원리와 구조가 달라서 어간 추출이 다르다.</p>
+<ul>
+<li>
+<p>영어의 경우 명사가 복수형으로 기술된 것을 단수형으로 바꾸는 작업도 어간 추출에 포함</p>
+</li>
+<li>
+<p>포터 스테머(Porter Stemmer)</p>
+<ul>
+<li>마틴 포터가 작성한 스테밍 알고리즘</li>
+<li>단어가 변형되는 규칙을 이용해 원형을 찾는거라서 사전에 있는 단어로 변환 되는것은 아니다.</li>
+</ul>
+<pre><code class="language-python">from nltk.stem import PorterStemmer
+stemmer = PorterStemmer()
+print(stemmer.stem('cooking'), stemmer.stem('cookery'),stemmer.stem('cookbooks'))
+# cook cookeri cookbook
+</code></pre>
+</li>
+<li>
+<p>랭카스트 스테머(Lancaster Stemmer)</p>
+<pre><code class="language-python">from nltk.stem import LancasterStemmer
+stemmer = LancasterStemmer()
+print(stemmer.stem('cooking'), stemmer.stem('cookery'),stemmer.stem('cookbooks'))
+# cook cookery cookbook
+</code></pre>
+<ul>
+<li>두 알고리즘 차이는 cookery에서 볼수 있다.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>표제어 추출</p>
+<ul>
+<li>주어진 단어를 기본형으로 변환</li>
+<li>의미적 관점에서 단어의 기본형을 찾는 것</li>
+</ul>
+<pre><code class="language-python">from nltk.stem import WordNetLemmatizer
+lemmatizer = WordNetLemmatizer()
+print(lemmatizer.lemmatize('cooking'))
+print(lemmatizer.lemmatize('cooking', pos='v')) # 품사를 지정
+print(lemmatizer.lemmatize('cookery'))
+print(lemmatizer.lemmatize('cookbooks'))
+# cooking
+# cook
+# cookery
+# cookbook
+</code></pre>
+<ul>
+<li>cooking에 대한 기본형이 동일한데 사전에 요리라는 뜻으로 cooking이라는 명사가 존재하기 때문이고 pos에 동사라고 지정하면 cook이라고 반환한다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-4" tabindex="-1">2.4. 품사 태깅</h2>
+<ul>
+<li>
+<p>토큰화와 정규화 과정을 거쳐서 나온 각 결과를 보통은 형태소라고 한다.</p>
+</li>
+<li>
+<p>형태소는 의미를 가진 가장 작은 말의 단위</p>
+<ul>
+<li>예시 ) 책가방 ⇒ 책 + 가방 ≠&gt;책 + 가 + 방</li>
+</ul>
+</li>
+<li>
+<p>품사의 이해</p>
+<ul>
+<li>주어진 텍스트를 분리할때 낱말까지 하는것이 좋은지 아니면 형태소까지 하는 것이 좋은지는 분석하고자 하는 내용과 성능에 달려 있다.</li>
+<li>아래는 우리말의 주요 품사와 설명이다.</li>
+</ul>
+</li>
+</ul>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>품사</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>명사</td>
+<td>이름을 나타내는 낱말</td>
+</tr>
+<tr>
+<td>대명사</td>
+<td>이름을 대신해 가리키는 낱말</td>
+</tr>
+<tr>
+<td>수사</td>
+<td>수량이나 순서를 가리키는 낱말</td>
+</tr>
+<tr>
+<td>조사</td>
+<td>도와주는 낱말</td>
+</tr>
+<tr>
+<td>동사</td>
+<td>움직임을 나타내는 낱말</td>
+</tr>
+<tr>
+<td>형용사</td>
+<td>상태나 성질을 나타내는 낱말</td>
+</tr>
+<tr>
+<td>관형사</td>
+<td>체언을 꾸며 주는 낱말</td>
+</tr>
+<tr>
+<td>부사</td>
+<td>주로 용언을 꾸며주는 낱말</td>
+</tr>
+<tr>
+<td>감탄사</td>
+<td>놀람, 느낌, 부름, 대답을 나타내는 낱말</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>용언 : 동사와 형용사를 함께 부르는 말</li>
+<li>체언 : 명사, 대명사, 수사를 묶어서 부르는 말</li>
+<li>조사 : 관계언</li>
+<li>감탄사 : 독립언</li>
+<li>공용 품사 태그
+<ul>
+<li>품사 태그는 언어나 학자에 따라 다르게 정의함</li>
+<li>다양한 언어에서 공통되는 품사 태그를 나타낸 것</li>
+</ul>
+</li>
+</ul>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>태그</th>
+<th>뜻</th>
+<th>예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADJ</td>
+<td>adjective</td>
+<td>new, good, high, special, big, local</td>
+</tr>
+<tr>
+<td>ADP</td>
+<td>adposition</td>
+<td>on, of, at, with, by, into, under</td>
+</tr>
+<tr>
+<td>ADV</td>
+<td>adverb</td>
+<td>really, already, still, early, now</td>
+</tr>
+<tr>
+<td>CONJ</td>
+<td>conjunction</td>
+<td>and, or, but, if, while, although</td>
+</tr>
+<tr>
+<td>DET</td>
+<td>determiner, article</td>
+<td>the, a, some, most, every, no, which</td>
+</tr>
+<tr>
+<td>NOUN</td>
+<td>noun</td>
+<td>year, home, costs, time, Africa</td>
+</tr>
+<tr>
+<td>NUM</td>
+<td>numberal</td>
+<td>twenty-four, fourth, 1991, 14:24</td>
+</tr>
+<tr>
+<td>PRT</td>
+<td>particle</td>
+<td>at, on, out, over, per, that, up, with</td>
+</tr>
+<tr>
+<td>PRON</td>
+<td>pronoun</td>
+<td>he, their, her, its, my, I, us</td>
+</tr>
+<tr>
+<td>VERB</td>
+<td>verb</td>
+<td>is, say, told, given, playing, would</td>
+</tr>
+<tr>
+<td>.</td>
+<td>punctuation marks</td>
+<td>.,;!</td>
+</tr>
+<tr>
+<td>X</td>
+<td>other</td>
+<td>ersatz, esprit, dunno, gr8, univeristy</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>
+<p>펜 트리뱅크 태그 집합</p>
+<ul>
+<li>공용 품사 태그 집합에 비해 훨씬 세분화된 품사 분류</li>
+<li><a href="https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html" target="_blank" class="external-link">https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html</a></li>
+</ul>
+</li>
+<li>
+<p>NLTK를 활용한 품사 태깅</p>
+<ul>
+<li>영어는 NLTK가 잘 해준다.</li>
+<li>NLTK는 펜 트리뱅크 태그 집합을 사용한다. 의미를 모르면 코드 마지막 처럼 쓸수 있다.</li>
+</ul>
+<pre><code class="language-python">import nltk
+from nltk.tokenize import word_tokenize
+nltk.download('tagsets')
+
+tokens = word_tokenize(&quot;Hello everyone. It's good to see you. Let's start our text min-ing class!&quot;)
+
+print(nltk.pos_tag(tokens))
+# [('Hello', 'NNP'), ('everyone', 'NN'), ('.', '.'), ('It', 'PRP'), (&quot;'s&quot;, 'VBZ'), ('good', 'JJ'), ('to', 'TO'), ('see', 'VB'), ('you', 'PRP'), ('.', '.'), ('Let', 'VB'), (&quot;'s&quot;, 'POS'), ('start', 'VB'), ('our', 'PRP$'), ('text', 'JJ'), ('min-ing', 'JJ'), ('class', 'NN'), ('!', '.')]
+
+nltk.help.upenn_tagset('NNP')
+&quot;&quot;&quot;
+NNP: noun, proper, singular
+    Motown Venneboerger Czestochwa Ranzer Conchita Trumplane Christos
+    Oceanside Escobar Kreisler Sawyer Cougar Yvette Ervin ODI Darryl CTCA
+    Shannon A.K.C. Meltex Liverpool ...
+&quot;&quot;&quot;
+</code></pre>
+<ul>
+<li>원하는 품사만 추출</li>
+</ul>
+<pre><code class="language-python">my_tag_set = ['NN', 'VB', 'JJ']
+my_words = [word for word, tag in nltk.pos_tag(tokens) if tag in my_tag_set]
+print(my_words)
+# ['everyone', 'good', 'see', 'Let', 'start', 'text', 'mining', 'class']
+</code></pre>
+<ul>
+<li>단어에 품사 정보를 추가해 구분
+<ul>
+<li>동음이의어를 처리하거나 품사를 이용해 단어를 더 정확하게 구분하는 방법으로 문장의 의미를 정확히 파악하려고 할때 많이 쓰인다.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-python">words_with_tag = ['/'.join(item) for item in nltk.pos_tag(tokens)]
+print(words_with_tag)
+# ['Hello/NNP', 'everyone/NN', './.', 'It/PRP', &quot;'s/VBZ&quot;, 'good/JJ', 'to/TO', 'see/VB', 'you/PRP', './.', 'Let/VB', &quot;'s/POS&quot;, 'start/VB', 'our/PRP$', 'text/JJ', 'min-ing/JJ', 'class/NN', '!/.']
+
+</code></pre>
+</li>
+<li>
+<p>한글 형태소 분석과 품사 태깅</p>
+<ul>
+<li>NLTK로는 제대로 안되므로 KoNLPy를 사용한다.</li>
+<li>KoNLPy는 5종의 형태소 분석기를 제공하며 홈페이지에서 성능 비교를 확인할 수 있다.</li>
+<li>morphs(phrase) : 주어진 텍스트를 형태소 단위로 분리</li>
+<li>nouns(phrase) : 주어진 텍스트를 형태소 단위로 분리해서 명사만 반환</li>
+<li>pos(phrase) : 주어진 텍스트를 형태소 단위로 분리하고 각 형태소에 부착해 반환</li>
+</ul>
+<pre><code class="language-python">from konlpy.tag import Okt
+
+t = Okt()
+
+sentence = '''절망의 반대가 희망은 아니다. 어두운 밤하늘에 별이 빛나듯
+희망은 절망 속에 싹트는 거지
+만약에 우리가 희망함이 적다면
+그 누가 세상을 비출어줄까. 정희성, 희망 공부'''
+
+print('형태소:', t.morphs(sentence))
+print()
+print('명사:', t.nouns(sentence))
+print()
+print('품사 태깅 결과:', t.pos(sentence))
+
+&quot;&quot;&quot;
+형태소: ['절망', '의', '반대', '가', '희망', '은', '아니다', '.', '어', '두운', '밤하늘', '에', '별', '이', '빛나듯', '\\n', '희망', '은', '절망', '속', '에', '싹트는', '거지', '\\n', '만약', '에', '우리', '가', '희망', '함', '이', '적다면', '\\n', '그', '누가', '세상', '을', '비출어줄까', '.', '정희성', ',', '희망', '공부']
+
+명사: ['절망', '반대', '희망', '어', '두운', '밤하늘', '별', '희망', '절망', '속', '거지', '만약', '우리', '희망', '함', '그', '누가', '세상', '정희성', '희망', '공부']
+
+품사 태깅 결과: [('절망', 'Noun'), ('의', 'Josa'), ('반대', 'Noun'), ('가', 'Josa'), ('희망', 'Noun'), ('은', 'Josa'), ('아니다', 'Adjective'), ('.', 'Punctuation'), ('어', 'Noun'), ('두운', 'Noun'), ('밤하늘', 'Noun'), ('에', 'Josa'), ('별', 'Noun'), ('이', 'Josa'), ('빛나듯', 'Verb'), ('\\n', 'Foreign'), ('희망', 'Noun'), ('은', 'Josa'), ('절망', 'Noun'), ('속', 'Noun'), ('에', 'Josa'), ('싹트는', 'Verb'), ('거지', 'Noun'), ('\\n', 'Foreign'), ('만약', 'Noun'), ('에', 'Josa'), ('우리', 'Noun'), ('가', 'Josa'), ('희망', 'Noun'), ('함', 'Noun'), ('이', 'Josa'), ('적다면', 'Verb'), ('\\n', 'Foreign'), ('그', 'Noun'), ('누가', 'Noun'), ('세상', 'Noun'), ('을', 'Josa'), ('비출어줄까', 'Verb'), ('.', 'Punctuation'), ('정희성', 'Noun'), (',', 'Punctuation'), ('희망', 'Noun'), ('공부', 'Noun')]
+
+&quot;&quot;&quot;
+</code></pre>
+</li>
+</ul>
 
       
       
       <div>
-          <script src="https://utteranc.es/client.js"
-                  repo="jaeminkim87/blog_comment"
-                  issue-term="pathname"
-                  theme="github-dark"
-                  crossorigin="anonymous"
-                  async></script>
+        <script src="https://utteranc.es/client.js"
+                repo="jaeminkim87/blog_comment"
+                issue-term="pathname"
+                theme="github-dark"
+                crossorigin="anonymous"
+                async></script>
       </div>
     </main>
 
@@ -1086,6 +1605,32 @@
 
                   
                         
+                        
+                              <div class="toc">
+                                    <div class="toc-title-container">
+                                          <div class="toc-title">
+                                                On this page
+                                          </div>
+                                    </div>
+                                    <div class="toc-container">
+                                          <nav class="toc">
+                <ol>
+                    
+                    <li><a href="#2-1">2.1. 텍스트 전처리 방식</a>
+            		</li>
+
+                    <li><a href="#2-2">2.2. 토큰화</a>
+            		</li>
+
+                    <li><a href="#2-3">2.3. 정규화</a>
+            		</li>
+
+                    <li><a href="#2-4">2.4. 품사 태깅</a>
+            		</li>
+                </ol>
+            </nav>
+                                    </div>
+                              </div>
                         
 
                   
@@ -1265,6 +1810,39 @@
 </script>
 
     
+        <script>
+      if (window.location.hash) {
+        document.getElementById(window.location.hash.slice(1)).classList.add('referred');
+      }
+      window.addEventListener('hashchange', (evt) => {
+        const oldParts = evt.oldURL.split("#");
+        if (oldParts[1]) {
+          document.getElementById(oldParts[1]).classList.remove('referred');
+        }
+        const newParts = evt.newURL.split("#");
+        if (newParts[1]) {
+          document.getElementById(newParts[1]).classList.add('referred');
+        }
+      }, false);
+      const url_parts = window.location.href.split("#")
+      const url = url_parts[0];
+      const referrence = url_parts[1];
+      document.querySelectorAll(".cm-s-obsidian > *[id]").forEach(function (el) {
+        el.ondblclick = function(evt) {
+          const ref_url = url + '#' + evt.target.id
+          navigator.clipboard.writeText(ref_url);
+      }
+      });
+
+      
+    </script>
+    <script src=" https://fastly.jsdelivr.net/npm/luxon@3.2.1/build/global/luxon.min.js "></script>
+<script defer>
+    TIMESTAMP_FORMAT = "yyyy-MMM-dd, h:mm a";
+    document.querySelectorAll('.human-date').forEach(function (el) {
+        el.innerHTML = luxon.DateTime.fromISO(el.getAttribute('data-date') || el.innerText).toFormat(TIMESTAMP_FORMAT);
+      });
+</script>
     
     
     <script>
@@ -1274,5 +1852,5 @@ lucide.createIcons({
             }
         });
 </script>
-    </body>
-  </html>
+  </body>
+</html>

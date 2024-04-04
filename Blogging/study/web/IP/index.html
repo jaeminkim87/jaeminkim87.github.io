@@ -292,6 +292,17 @@
         
     
                     
+                        
+    
+        <div x-show="isOpen" style="display:none" class="filelist">
+            
+                <div @click.stop class="notelink "><i icon-name="sticky-note" aria-hidden="true"></i><a data-note-icon="" style="text-decoration: none;" class="filename" href="/Blogging/study/books/파이썬 텍스트 마이닝 완벽 가이드/2장/">2장 텍스트 전처리 </a>
+                </div>
+            
+        </div>
+        
+    
+                    
                 </div>
             
         </div>
@@ -789,7 +800,7 @@
     async function init() {
         //init offline search index
 
-        const searchIndexDate = '2024-04-04T10:49:17.878Z';
+        const searchIndexDate = '2024-04-04T10:49:19.484Z';
         let shouldFetch = true;
         if(localStorage.getItem("searchIndex")) {
             let {date, docs}= JSON.parse(localStorage.getItem('searchIndex'));
@@ -801,9 +812,9 @@
             }        
         }
         if(shouldFetch){
-            let docs = await(await fetch('/searchIndex.json?v=2024-04-04T10:49:17.878Z')).json();
+            let docs = await(await fetch('/searchIndex.json?v=2024-04-04T10:49:19.484Z')).json();
             let index = createIndex(docs);
-            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-04-04T10:49:17.878Z', docs}));
+            localStorage.setItem("searchIndex", JSON.stringify({date: '2024-04-04T10:49:19.484Z', docs}));
             window.docs = docs
             window.index = index;
         }
